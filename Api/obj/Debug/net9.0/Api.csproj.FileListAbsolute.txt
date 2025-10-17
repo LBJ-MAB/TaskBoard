@@ -59,3 +59,4 @@ C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api\obj\Debug\net9.0\refint\Api
 C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api\obj\Debug\net9.0\Api.pdb
 C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api\obj\Debug\net9.0\Api.genruntimeconfig.cache
 C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api\obj\Debug\net9.0\ref\Api.dll
+C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api\obj\Debug\net9.0\Api.sourcelink.json

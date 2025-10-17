@@ -13,3 +13,4 @@ C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Infrastructure\obj\Debug\net9.0
 C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Infrastructure\obj\Debug\net9.0\refint\Infrastructure.dll
 C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Infrastructure\obj\Debug\net9.0\Infrastructure.pdb
 C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Infrastructure\obj\Debug\net9.0\ref\Infrastructure.dll
+C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Infrastructure\obj\Debug\net9.0\Infrastructure.sourcelink.json

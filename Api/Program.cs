@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Domain;
 using Infrastructure;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 // dependency injection
@@ -14,8 +15,9 @@ builder.Services.AddOpenApiDocument(config =>
     config.Title = "TaskBoardAPI v1";
     config.Version = "v1";
 });
-
+// build the web application
 var app = builder.Build();
+// use swagger
 if (app.Environment.IsDevelopment())
 {
     app.UseOpenApi();
@@ -28,9 +30,12 @@ if (app.Environment.IsDevelopment())
     });
 }
 
+// middleware for logging to console - view in Run window in Rider
+app.UseMiddleware<RequestLoggingMiddleware>();
+// middleware for using Serilog logging
+
 // implementing MapGroup for simplification:
 var tasks = app.MapGroup("/tasks");
-
 // using methods rather than lambdas
 tasks.MapGet("/", GetAllTasks);         // method for getting all tasks
 tasks.MapGet("/{id}", GetTask);         // method for getting a single task
@@ -44,7 +49,6 @@ static async Task<IResult> GetAllTasks(TaskDb db)
 {
     return TypedResults.Ok(await db.Tasks.OrderBy(t => t.IsComplete).ThenBy(t => t.Priority).ToListAsync());
 }
-
 // get a single task
 static async Task<IResult> GetTask(TaskDb db, int id)
 {
@@ -57,13 +61,11 @@ static async Task<IResult> GetTask(TaskDb db, int id)
 
     return TypedResults.Ok(task);
 }
-
 // get all complete tasks
 static async Task<IResult> GetCompleteTasks(TaskDb db)
 {
     return TypedResults.Ok(await db.Tasks.Where(t => t.IsComplete).OrderBy(t => t.Priority).ToListAsync());
 }
-
 // add a task to the list
 static async Task<IResult> AddTask(TaskDb db, TaskItem task)
 {
@@ -73,7 +75,6 @@ static async Task<IResult> AddTask(TaskDb db, TaskItem task)
 
     return TypedResults.Created($"/tasks/{task.Id}", task);
 }
-
 // update a task in the list
 static async Task<IResult> UpdateTask(TaskDb db, TaskItem inputTask, int id)
 {
@@ -92,7 +93,6 @@ static async Task<IResult> UpdateTask(TaskDb db, TaskItem inputTask, int id)
 
     return TypedResults.NoContent();
 }
-
 // delete a task
 static async Task<IResult> DeleteTask(TaskDb db, int id)
 {
