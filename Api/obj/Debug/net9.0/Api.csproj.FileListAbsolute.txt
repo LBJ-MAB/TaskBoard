@@ -60,3 +60,13 @@ C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api\obj\Debug\net9.0\Api.pdb
 C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api\obj\Debug\net9.0\Api.genruntimeconfig.cache
 C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api\obj\Debug\net9.0\ref\Api.dll
 C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api\obj\Debug\net9.0\Api.sourcelink.json
+C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api\bin\Debug\net9.0\Serilog.dll
+C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api\bin\Debug\net9.0\Serilog.AspNetCore.dll
+C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api\bin\Debug\net9.0\Serilog.Extensions.Hosting.dll
+C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api\bin\Debug\net9.0\Serilog.Extensions.Logging.dll
+C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api\bin\Debug\net9.0\Serilog.Formatting.Compact.dll
+C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api\bin\Debug\net9.0\Serilog.Settings.Configuration.dll
+C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api\bin\Debug\net9.0\Serilog.Sinks.Console.dll
+C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api\bin\Debug\net9.0\Serilog.Sinks.Debug.dll
+C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api\bin\Debug\net9.0\Serilog.Sinks.File.dll

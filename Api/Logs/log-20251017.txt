@@ -1,0 +1,338 @@
+2025-10-17 11:52:47.515 +01:00 [INF] Now listening on: http://localhost:5001
+2025-10-17 11:52:47.555 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-17 11:52:47.557 +01:00 [INF] Hosting environment: Development
+2025-10-17 11:52:47.559 +01:00 [INF] Content root path: C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api
+2025-10-17 11:52:48.250 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/ - null null
+2025-10-17 11:52:48.358 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/ - 404 0 null 110.1854ms
+2025-10-17 11:52:48.378 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5001/, Response status code: 404
+2025-10-17 11:52:57.806 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger - null null
+2025-10-17 11:52:57.817 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger - 302 0 null 14.752ms
+2025-10-17 11:52:57.826 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/index.html - null null
+2025-10-17 11:52:57.944 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/index.html - 200 null text/html; charset=utf-8 118.0331ms
+2025-10-17 11:52:58.202 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - null null
+2025-10-17 11:52:58.223 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-10-17 11:52:58.560 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - 200 null application/json; charset=utf-8 358.1025ms
+2025-10-17 11:53:08.563 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks - null null
+2025-10-17 11:53:08.579 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/ => GetAllTasks'
+2025-10-17 11:53:08.696 +01:00 [INF] Requesting all tasks
+2025-10-17 11:53:09.132 +01:00 [WRN] No tasks found
+2025-10-17 11:53:09.137 +01:00 [INF] Setting HTTP status code 404.
+2025-10-17 11:53:09.139 +01:00 [INF] Writing value of type 'String' as Json.
+2025-10-17 11:53:09.144 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/ => GetAllTasks'
+2025-10-17 11:53:09.152 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks - 404 null application/json; charset=utf-8 588.6696ms
+2025-10-17 11:54:30.316 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/tasks - application/json 62
+2025-10-17 11:54:30.324 +01:00 [INF] Executing endpoint 'HTTP: POST /tasks/ => AddTask'
+2025-10-17 11:54:30.459 +01:00 [INF] Saved 1 entities to in-memory store.
+2025-10-17 11:54:30.466 +01:00 [INF] Setting HTTP status code 201.
+2025-10-17 11:54:30.468 +01:00 [INF] Writing value of type 'TaskItem' as Json.
+2025-10-17 11:54:30.472 +01:00 [INF] Executed endpoint 'HTTP: POST /tasks/ => AddTask'
+2025-10-17 11:54:30.474 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/tasks - 201 null application/json; charset=utf-8 158.1077ms
+2025-10-17 11:54:54.572 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks - null null
+2025-10-17 11:54:54.584 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/ => GetAllTasks'
+2025-10-17 11:54:54.591 +01:00 [INF] Requesting all tasks
+2025-10-17 11:54:54.624 +01:00 [INF] Retrieved 1 tasks
+2025-10-17 11:54:54.626 +01:00 [INF] Setting HTTP status code 200.
+2025-10-17 11:54:54.633 +01:00 [INF] Writing value of type 'List`1' as Json.
+2025-10-17 11:54:54.636 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/ => GetAllTasks'
+2025-10-17 11:54:54.638 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks - 200 null application/json; charset=utf-8 66.62ms
+2025-10-17 11:56:05.986 +01:00 [INF] Application is shutting down...
+2025-10-17 11:58:51.553 +01:00 [INF] Now listening on: http://localhost:5001
+2025-10-17 11:58:51.592 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-17 11:58:51.594 +01:00 [INF] Hosting environment: Development
+2025-10-17 11:58:51.595 +01:00 [INF] Content root path: C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api
+2025-10-17 11:58:52.326 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/ - null null
+2025-10-17 11:58:52.413 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/ - 404 0 null 89.0886ms
+2025-10-17 11:58:52.434 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5001/, Response status code: 404
+2025-10-17 11:58:55.717 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger - null null
+2025-10-17 11:58:55.727 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger - 302 0 null 10.0332ms
+2025-10-17 11:58:55.734 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/index.html - null null
+2025-10-17 11:58:55.827 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/index.html - 200 null text/html; charset=utf-8 92.8049ms
+2025-10-17 11:58:56.022 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - null null
+2025-10-17 11:58:56.045 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-10-17 11:58:56.373 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - 200 null application/json; charset=utf-8 351.4235ms
+2025-10-17 11:59:05.978 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks/1 - null null
+2025-10-17 11:59:05.996 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/{id} => GetTask'
+2025-10-17 11:59:06.112 +01:00 [INF] Requesting task with id 1
+2025-10-17 11:59:06.557 +01:00 [WRN] Could not find task with id 1
+2025-10-17 11:59:06.561 +01:00 [INF] Setting HTTP status code 400.
+2025-10-17 11:59:06.563 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/{id} => GetTask'
+2025-10-17 11:59:06.569 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks/1 - 400 0 null 590.9181ms
+2025-10-17 11:59:40.185 +01:00 [INF] Application is shutting down...
+2025-10-17 11:59:49.435 +01:00 [INF] Now listening on: http://localhost:5001
+2025-10-17 11:59:49.481 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-17 11:59:49.485 +01:00 [INF] Hosting environment: Development
+2025-10-17 11:59:49.486 +01:00 [INF] Content root path: C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api
+2025-10-17 11:59:50.333 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/ - null null
+2025-10-17 11:59:50.425 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/ - 404 0 null 92.7618ms
+2025-10-17 11:59:50.447 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5001/, Response status code: 404
+2025-10-17 11:59:54.923 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger - null null
+2025-10-17 11:59:54.935 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger - 302 0 null 12.5558ms
+2025-10-17 11:59:54.945 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/index.html - null null
+2025-10-17 11:59:55.062 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/index.html - 200 null text/html; charset=utf-8 116.7028ms
+2025-10-17 11:59:55.251 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - null null
+2025-10-17 11:59:55.266 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-10-17 11:59:55.577 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - 200 null application/json; charset=utf-8 326.29ms
+2025-10-17 12:00:02.763 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks/1 - null null
+2025-10-17 12:00:02.777 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/{id} => GetTask'
+2025-10-17 12:00:02.888 +01:00 [INF] Requesting task with id 1
+2025-10-17 12:00:03.353 +01:00 [WRN] Could not find task with id 1
+2025-10-17 12:00:03.357 +01:00 [INF] Setting HTTP status code 400.
+2025-10-17 12:00:03.359 +01:00 [INF] Writing value of type 'String' as Json.
+2025-10-17 12:00:03.363 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/{id} => GetTask'
+2025-10-17 12:00:03.369 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks/1 - 400 null application/json; charset=utf-8 605.5161ms
+2025-10-17 12:00:21.382 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/tasks - application/json 61
+2025-10-17 12:00:21.389 +01:00 [INF] Executing endpoint 'HTTP: POST /tasks/ => AddTask'
+2025-10-17 12:00:21.522 +01:00 [INF] Saved 1 entities to in-memory store.
+2025-10-17 12:00:21.528 +01:00 [INF] Setting HTTP status code 201.
+2025-10-17 12:00:21.531 +01:00 [INF] Writing value of type 'TaskItem' as Json.
+2025-10-17 12:00:21.534 +01:00 [INF] Executed endpoint 'HTTP: POST /tasks/ => AddTask'
+2025-10-17 12:00:21.536 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/tasks - 201 null application/json; charset=utf-8 154.1222ms
+2025-10-17 12:00:28.980 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks/1 - null null
+2025-10-17 12:00:28.989 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/{id} => GetTask'
+2025-10-17 12:00:28.995 +01:00 [INF] Requesting task with id 1
+2025-10-17 12:00:29.022 +01:00 [INF] Retrieved task with id 1
+2025-10-17 12:00:29.025 +01:00 [INF] Setting HTTP status code 200.
+2025-10-17 12:00:29.027 +01:00 [INF] Writing value of type 'TaskItem' as Json.
+2025-10-17 12:00:29.028 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/{id} => GetTask'
+2025-10-17 12:00:29.030 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks/1 - 200 null application/json; charset=utf-8 49.3914ms
+2025-10-17 12:00:57.634 +01:00 [INF] Application is shutting down...
+2025-10-17 12:04:25.042 +01:00 [INF] Now listening on: http://localhost:5001
+2025-10-17 12:04:25.095 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-17 12:04:25.099 +01:00 [INF] Hosting environment: Development
+2025-10-17 12:04:25.101 +01:00 [INF] Content root path: C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api
+2025-10-17 12:04:25.702 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/ - null null
+2025-10-17 12:04:25.785 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/ - 404 0 null 83.1231ms
+2025-10-17 12:04:25.803 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5001/, Response status code: 404
+2025-10-17 12:04:28.635 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger - null null
+2025-10-17 12:04:28.646 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger - 302 0 null 11.0247ms
+2025-10-17 12:04:28.655 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/index.html - null null
+2025-10-17 12:04:28.752 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/index.html - 200 null text/html; charset=utf-8 97.6433ms
+2025-10-17 12:04:28.956 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - null null
+2025-10-17 12:04:28.977 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-10-17 12:04:29.297 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - 200 null application/json; charset=utf-8 340.9799ms
+2025-10-17 12:04:36.120 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks/complete - null null
+2025-10-17 12:04:36.133 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/complete => GetCompleteTasks'
+2025-10-17 12:04:36.244 +01:00 [INF] Requesting all complete tasks
+2025-10-17 12:04:36.663 +01:00 [INF] Could not find any complete tasks
+2025-10-17 12:04:36.668 +01:00 [INF] Setting HTTP status code 404.
+2025-10-17 12:04:36.670 +01:00 [INF] Writing value of type 'String' as Json.
+2025-10-17 12:04:36.675 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/complete => GetCompleteTasks'
+2025-10-17 12:04:36.680 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks/complete - 404 null application/json; charset=utf-8 559.6837ms
+2025-10-17 12:05:03.805 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/tasks - application/json 61
+2025-10-17 12:05:03.812 +01:00 [INF] Executing endpoint 'HTTP: POST /tasks/ => AddTask'
+2025-10-17 12:05:03.945 +01:00 [INF] Saved 1 entities to in-memory store.
+2025-10-17 12:05:03.951 +01:00 [INF] Setting HTTP status code 201.
+2025-10-17 12:05:03.953 +01:00 [INF] Writing value of type 'TaskItem' as Json.
+2025-10-17 12:05:03.955 +01:00 [INF] Executed endpoint 'HTTP: POST /tasks/ => AddTask'
+2025-10-17 12:05:03.957 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/tasks - 201 null application/json; charset=utf-8 152.2542ms
+2025-10-17 12:05:23.293 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks/complete - null null
+2025-10-17 12:05:23.303 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/complete => GetCompleteTasks'
+2025-10-17 12:05:23.307 +01:00 [INF] Requesting all complete tasks
+2025-10-17 12:05:23.331 +01:00 [INF] Retrieved 1 complete tasks
+2025-10-17 12:05:23.339 +01:00 [INF] Setting HTTP status code 200.
+2025-10-17 12:05:23.351 +01:00 [INF] Writing value of type 'List`1' as Json.
+2025-10-17 12:05:23.358 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/complete => GetCompleteTasks'
+2025-10-17 12:05:23.362 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks/complete - 200 null application/json; charset=utf-8 68.4768ms
+2025-10-17 12:05:39.049 +01:00 [INF] Application is shutting down...
+2025-10-17 12:12:01.615 +01:00 [INF] Now listening on: http://localhost:5001
+2025-10-17 12:12:01.655 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-17 12:12:01.658 +01:00 [INF] Hosting environment: Development
+2025-10-17 12:12:01.660 +01:00 [INF] Content root path: C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api
+2025-10-17 12:12:02.479 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/ - null null
+2025-10-17 12:12:02.573 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/ - 404 0 null 95.9208ms
+2025-10-17 12:12:02.591 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5001/, Response status code: 404
+2025-10-17 12:12:06.237 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger - null null
+2025-10-17 12:12:06.250 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger - 302 0 null 14.3183ms
+2025-10-17 12:12:06.269 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/index.html - null null
+2025-10-17 12:12:06.359 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/index.html - 200 null text/html; charset=utf-8 89.9002ms
+2025-10-17 12:12:06.553 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - null null
+2025-10-17 12:12:06.572 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-10-17 12:12:06.872 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - 200 null application/json; charset=utf-8 318.7918ms
+2025-10-17 12:12:30.920 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/tasks - application/json 86
+2025-10-17 12:12:30.933 +01:00 [INF] Executing endpoint 'HTTP: POST /tasks/ => AddTask'
+2025-10-17 12:12:31.039 +01:00 [INF] adding task
+2025-10-17 12:12:31.397 +01:00 [INF] Saved 1 entities to in-memory store.
+2025-10-17 12:12:31.404 +01:00 [INF] successfully added task
+2025-10-17 12:12:31.406 +01:00 [INF] Setting HTTP status code 201.
+2025-10-17 12:12:31.408 +01:00 [INF] Writing value of type 'TaskItem' as Json.
+2025-10-17 12:12:31.412 +01:00 [INF] Executed endpoint 'HTTP: POST /tasks/ => AddTask'
+2025-10-17 12:12:31.417 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/tasks - 201 null application/json; charset=utf-8 496.2906ms
+2025-10-17 12:12:55.618 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/tasks - application/json 19
+2025-10-17 12:12:55.629 +01:00 [INF] Executing endpoint 'HTTP: POST /tasks/ => AddTask'
+2025-10-17 12:12:55.633 +01:00 [INF] adding task
+2025-10-17 12:12:55.683 +01:00 [ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.TaskDb'.
+Microsoft.EntityFrameworkCore.DbUpdateException: Required properties '{'Name'}' are missing for the instance of entity type 'TaskItem'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the entity key value.
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTable`1.ThrowNullabilityErrorException(IUpdateEntry entry, IList`1 nullabilityErrors)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTable`1.Create(IUpdateEntry entry, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryStore.ExecuteTransaction(IList`1 entries, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: Required properties '{'Name'}' are missing for the instance of entity type 'TaskItem'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the entity key value.
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTable`1.ThrowNullabilityErrorException(IUpdateEntry entry, IList`1 nullabilityErrors)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTable`1.Create(IUpdateEntry entry, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryStore.ExecuteTransaction(IList`1 entries, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-10-17 12:12:55.691 +01:00 [INF] Executed endpoint 'HTTP: POST /tasks/ => AddTask'
+2025-10-17 12:12:55.694 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: Required properties '{'Name'}' are missing for the instance of entity type 'TaskItem'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the entity key value.
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTable`1.ThrowNullabilityErrorException(IUpdateEntry entry, IList`1 nullabilityErrors)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTable`1.Create(IUpdateEntry entry, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryStore.ExecuteTransaction(IList`1 entries, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Program.<<Main>$>g__AddTask|0_6(TaskDb db, TaskItem task, ILogger`1 loggerInput) in C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api\Program.cs:line 103
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass101_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-10-17 12:12:55.709 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/tasks - 500 null text/plain; charset=utf-8 91.2195ms
+2025-10-17 12:13:17.830 +01:00 [INF] Application is shutting down...
+2025-10-17 12:17:23.349 +01:00 [INF] Now listening on: http://localhost:5001
+2025-10-17 12:17:23.390 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-17 12:17:23.392 +01:00 [INF] Hosting environment: Development
+2025-10-17 12:17:23.393 +01:00 [INF] Content root path: C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api
+2025-10-17 12:17:24.113 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/ - null null
+2025-10-17 12:17:24.200 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/ - 404 0 null 87.7811ms
+2025-10-17 12:17:24.218 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5001/, Response status code: 404
+2025-10-17 12:17:27.315 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger - null null
+2025-10-17 12:17:27.326 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger - 302 0 null 12.4114ms
+2025-10-17 12:17:27.332 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/index.html - null null
+2025-10-17 12:17:27.423 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/index.html - 200 null text/html; charset=utf-8 90.339ms
+2025-10-17 12:17:27.613 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - null null
+2025-10-17 12:17:27.630 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-10-17 12:17:27.943 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - 200 null application/json; charset=utf-8 330.8359ms
+2025-10-17 12:17:40.030 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/tasks - application/json 19
+2025-10-17 12:17:40.045 +01:00 [INF] Executing endpoint 'HTTP: POST /tasks/ => AddTask'
+2025-10-17 12:17:40.158 +01:00 [INF] adding task
+2025-10-17 12:17:40.539 +01:00 [ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.TaskDb'.
+Microsoft.EntityFrameworkCore.DbUpdateException: Required properties '{'Name'}' are missing for the instance of entity type 'TaskItem'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the entity key value.
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTable`1.ThrowNullabilityErrorException(IUpdateEntry entry, IList`1 nullabilityErrors)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTable`1.Create(IUpdateEntry entry, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryStore.ExecuteTransaction(IList`1 entries, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: Required properties '{'Name'}' are missing for the instance of entity type 'TaskItem'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the entity key value.
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTable`1.ThrowNullabilityErrorException(IUpdateEntry entry, IList`1 nullabilityErrors)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTable`1.Create(IUpdateEntry entry, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryStore.ExecuteTransaction(IList`1 entries, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-10-17 12:17:40.544 +01:00 [WRN] unable to add task
+2025-10-17 12:17:40.548 +01:00 [INF] Setting HTTP status code 400.
+2025-10-17 12:17:40.551 +01:00 [INF] Writing value of type 'String' as Json.
+2025-10-17 12:17:40.556 +01:00 [INF] Executed endpoint 'HTTP: POST /tasks/ => AddTask'
+2025-10-17 12:17:40.561 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/tasks - 400 null application/json; charset=utf-8 530.373ms
+2025-10-17 12:17:49.344 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/tasks - application/json 61
+2025-10-17 12:17:49.354 +01:00 [INF] Executing endpoint 'HTTP: POST /tasks/ => AddTask'
+2025-10-17 12:17:49.361 +01:00 [INF] adding task
+2025-10-17 12:17:49.389 +01:00 [INF] Saved 1 entities to in-memory store.
+2025-10-17 12:17:49.400 +01:00 [INF] successfully added task
+2025-10-17 12:17:49.403 +01:00 [INF] Setting HTTP status code 201.
+2025-10-17 12:17:49.406 +01:00 [INF] Writing value of type 'TaskItem' as Json.
+2025-10-17 12:17:49.411 +01:00 [INF] Executed endpoint 'HTTP: POST /tasks/ => AddTask'
+2025-10-17 12:17:49.415 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/tasks - 201 null application/json; charset=utf-8 70.2601ms
+2025-10-17 12:18:38.029 +01:00 [INF] Application is shutting down...
+2025-10-17 12:26:46.092 +01:00 [INF] Now listening on: http://localhost:5001
+2025-10-17 12:26:46.130 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-17 12:26:46.132 +01:00 [INF] Hosting environment: Development
+2025-10-17 12:26:46.134 +01:00 [INF] Content root path: C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api
+2025-10-17 12:26:46.612 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/ - null null
+2025-10-17 12:26:46.705 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/ - 404 0 null 94.845ms
+2025-10-17 12:26:46.723 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5001/, Response status code: 404
+2025-10-17 12:26:49.800 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger - null null
+2025-10-17 12:26:49.810 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger - 302 0 null 11.361ms
+2025-10-17 12:26:49.816 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/index.html - null null
+2025-10-17 12:26:49.916 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/index.html - 200 null text/html; charset=utf-8 100.1544ms
+2025-10-17 12:26:50.107 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - null null
+2025-10-17 12:26:50.123 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-10-17 12:26:50.418 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - 200 null application/json; charset=utf-8 310.3244ms
+2025-10-17 12:27:06.175 +01:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5001/tasks/1 - application/json 61
+2025-10-17 12:27:06.190 +01:00 [INF] Executing endpoint 'HTTP: PUT /tasks/{id} => UpdateTask'
+2025-10-17 12:27:06.304 +01:00 [INF] updating task 1
+2025-10-17 12:27:06.748 +01:00 [WRN] unable to update task 1
+2025-10-17 12:27:06.753 +01:00 [INF] Setting HTTP status code 400.
+2025-10-17 12:27:06.756 +01:00 [INF] Writing value of type 'String' as Json.
+2025-10-17 12:27:06.760 +01:00 [INF] Executed endpoint 'HTTP: PUT /tasks/{id} => UpdateTask'
+2025-10-17 12:27:06.765 +01:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5001/tasks/1 - 400 null application/json; charset=utf-8 589.9488ms
+2025-10-17 12:27:33.492 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/tasks - application/json 61
+2025-10-17 12:27:33.501 +01:00 [INF] Executing endpoint 'HTTP: POST /tasks/ => AddTask'
+2025-10-17 12:27:33.506 +01:00 [INF] adding task
+2025-10-17 12:27:33.613 +01:00 [INF] Saved 1 entities to in-memory store.
+2025-10-17 12:27:33.621 +01:00 [INF] successfully added task
+2025-10-17 12:27:33.622 +01:00 [INF] Setting HTTP status code 201.
+2025-10-17 12:27:33.624 +01:00 [INF] Writing value of type 'TaskItem' as Json.
+2025-10-17 12:27:33.626 +01:00 [INF] Executed endpoint 'HTTP: POST /tasks/ => AddTask'
+2025-10-17 12:27:33.628 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/tasks - 201 null application/json; charset=utf-8 135.7229ms
+2025-10-17 12:28:15.864 +01:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5001/tasks/1 - application/json 19
+2025-10-17 12:28:15.877 +01:00 [INF] Executing endpoint 'HTTP: PUT /tasks/{id} => UpdateTask'
+2025-10-17 12:28:15.886 +01:00 [INF] updating task 1
+2025-10-17 12:28:15.931 +01:00 [INF] Saved 1 entities to in-memory store.
+2025-10-17 12:28:15.935 +01:00 [INF] successfully updated task 1
+2025-10-17 12:28:15.938 +01:00 [INF] Setting HTTP status code 204.
+2025-10-17 12:28:15.941 +01:00 [INF] Executed endpoint 'HTTP: PUT /tasks/{id} => UpdateTask'
+2025-10-17 12:28:15.945 +01:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5001/tasks/1 - 204 null null 80.453ms
+2025-10-17 12:28:34.724 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks - null null
+2025-10-17 12:28:34.734 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/ => GetAllTasks'
+2025-10-17 12:28:34.740 +01:00 [INF] Requesting all tasks
+2025-10-17 12:28:34.764 +01:00 [INF] Retrieved 1 tasks
+2025-10-17 12:28:34.767 +01:00 [INF] Setting HTTP status code 200.
+2025-10-17 12:28:34.774 +01:00 [INF] Writing value of type 'List`1' as Json.
+2025-10-17 12:28:34.777 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/ => GetAllTasks'
+2025-10-17 12:28:34.780 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks - 200 null application/json; charset=utf-8 55.155ms
+2025-10-17 12:28:47.345 +01:00 [INF] Application is shutting down...
+2025-10-17 12:31:06.923 +01:00 [INF] Now listening on: http://localhost:5001
+2025-10-17 12:31:06.960 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-17 12:31:06.963 +01:00 [INF] Hosting environment: Development
+2025-10-17 12:31:06.965 +01:00 [INF] Content root path: C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api
+2025-10-17 12:31:07.787 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/ - null null
+2025-10-17 12:31:07.872 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/ - 404 0 null 86.352ms
+2025-10-17 12:31:07.889 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5001/, Response status code: 404
+2025-10-17 12:31:11.238 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger - null null
+2025-10-17 12:31:11.248 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger - 302 0 null 10.6837ms
+2025-10-17 12:31:11.256 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/index.html - null null
+2025-10-17 12:31:11.352 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/index.html - 200 null text/html; charset=utf-8 95.5679ms
+2025-10-17 12:31:11.541 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - null null
+2025-10-17 12:31:11.561 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-10-17 12:31:11.860 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - 200 null application/json; charset=utf-8 319.033ms
+2025-10-17 12:31:19.089 +01:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5001/tasks/1 - null null
+2025-10-17 12:31:19.102 +01:00 [INF] Executing endpoint 'HTTP: DELETE /tasks/{id} => DeleteTask'
+2025-10-17 12:31:19.203 +01:00 [INF] attempting to delete task 1
+2025-10-17 12:31:19.642 +01:00 [WRN] unable to find task with id 1
+2025-10-17 12:31:19.647 +01:00 [INF] Setting HTTP status code 400.
+2025-10-17 12:31:19.650 +01:00 [INF] Writing value of type 'String' as Json.
+2025-10-17 12:31:19.656 +01:00 [INF] Executed endpoint 'HTTP: DELETE /tasks/{id} => DeleteTask'
+2025-10-17 12:31:19.661 +01:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5001/tasks/1 - 400 null application/json; charset=utf-8 571.8531ms
+2025-10-17 12:31:31.680 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/tasks - application/json 61
+2025-10-17 12:31:31.689 +01:00 [INF] Executing endpoint 'HTTP: POST /tasks/ => AddTask'
+2025-10-17 12:31:31.705 +01:00 [INF] adding task
+2025-10-17 12:31:31.821 +01:00 [INF] Saved 1 entities to in-memory store.
+2025-10-17 12:31:31.827 +01:00 [INF] successfully added task
+2025-10-17 12:31:31.830 +01:00 [INF] Setting HTTP status code 201.
+2025-10-17 12:31:31.833 +01:00 [INF] Writing value of type 'TaskItem' as Json.
+2025-10-17 12:31:31.836 +01:00 [INF] Executed endpoint 'HTTP: POST /tasks/ => AddTask'
+2025-10-17 12:31:31.839 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/tasks - 201 null application/json; charset=utf-8 158.9026ms
+2025-10-17 12:31:46.199 +01:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5001/tasks/1 - null null
+2025-10-17 12:31:46.207 +01:00 [INF] Executing endpoint 'HTTP: DELETE /tasks/{id} => DeleteTask'
+2025-10-17 12:31:46.211 +01:00 [INF] attempting to delete task 1
+2025-10-17 12:31:46.238 +01:00 [INF] Saved 1 entities to in-memory store.
+2025-10-17 12:31:46.243 +01:00 [INF] successfully deleted task 1
+2025-10-17 12:31:46.245 +01:00 [INF] Setting HTTP status code 204.
+2025-10-17 12:31:46.247 +01:00 [INF] Executed endpoint 'HTTP: DELETE /tasks/{id} => DeleteTask'
+2025-10-17 12:31:46.248 +01:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5001/tasks/1 - 204 null null 48.9789ms
+2025-10-17 12:32:02.410 +01:00 [INF] Application is shutting down...
