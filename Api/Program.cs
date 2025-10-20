@@ -24,11 +24,11 @@ Log.Logger = serilogLogger;
 builder.Host.UseSerilog();
 
 // adding tasks service
-// builder.Services.AddScoped<ITaskService>(new InMemoryTaskService(TaskDb, ILogger<InMemoryTaskService>));
 builder.Services.AddScoped<ITaskService, InMemoryTaskService>();
 
 // build the web application
 var app = builder.Build();
+
 // use swagger
 if (app.Environment.IsDevelopment())
 {
@@ -47,9 +47,10 @@ if (app.Environment.IsDevelopment())
 
 // implementing MapGroup for simplification:
 var tasks = app.MapGroup("/tasks");
+
 tasks.MapGet("/", async (ITaskService service, TaskDb db, [FromServices] ILogger<InMemoryTaskService> logger) =>
 {
-    var result = await service.GetAllTasks(db, logger);
+    var result = await service.GetAllTasks();
     return result;
 });         
 tasks.MapGet("/{id}", async (int id, ITaskService service, TaskDb db, [FromServices] ILogger<InMemoryTaskService> logger) =>
@@ -59,27 +60,27 @@ tasks.MapGet("/{id}", async (int id, ITaskService service, TaskDb db, [FromServi
     // have given the db the name of "Tasks" at the top? 
     // If so, if I were to create another database also of type TaskDb, how would it 
     // know which TaskDb I am referring to?
-    var result = await service.GetTask(id, db, logger);
+    var result = await service.GetTask(id);
     return result;
 }); 
 tasks.MapGet("/complete", async (ITaskService service, TaskDb db, [FromServices] ILogger<InMemoryTaskService> logger) =>
 {
-    var result = await service.GetCompleteTasks(db, logger);
+    var result = await service.GetCompleteTasks();
     return result;
 });  
 tasks.MapPost("/", async (TaskItem task, ITaskService service, TaskDb db, [FromServices] ILogger<InMemoryTaskService> logger) =>
 {
-    var result = await service.AddTask(task, db, logger);
+    var result = await service.AddTask(task);
     return result;
 });   
 tasks.MapPut("/{id}", async (int id, TaskItem inputTask, ITaskService service, TaskDb db, [FromServices] ILogger<InMemoryTaskService> logger) =>
 {
-    var result = await service.UpdateTask(id, inputTask, db, logger);
+    var result = await service.UpdateTask(id, inputTask);
     return result;
 });    
 tasks.MapDelete("/{id}", async (int id, ITaskService service, TaskDb db, [FromServices] ILogger<InMemoryTaskService> logger) =>
 {
-    var result = await service.DeleteTask(id, db, logger);
+    var result = await service.DeleteTask(id);
     return result;
 });   
 

@@ -9,12 +9,12 @@ namespace Application;
 // define interface for generic task service
 public interface ITaskService
 {
-    Task<IResult> GetTask(int id, TaskDb db, ILogger logger);
-    Task<IResult> GetAllTasks(TaskDb db, ILogger logger);
-    Task<IResult> GetCompleteTasks(TaskDb db, ILogger logger);
-    Task<IResult> AddTask(TaskItem task, TaskDb db, ILogger logger);
-    Task<IResult> UpdateTask(int id, TaskItem inputTask, TaskDb db, ILogger logger);
-    Task<IResult> DeleteTask(int id, TaskDb db, ILogger logger);
+    Task<IResult> GetTask(int id);
+    Task<IResult> GetAllTasks();
+    Task<IResult> GetCompleteTasks();
+    Task<IResult> AddTask(TaskItem task);
+    Task<IResult> UpdateTask(int id, TaskItem inputTask);
+    Task<IResult> DeleteTask(int id);
 }
 
 // make "concrete" implementation for in memory database
