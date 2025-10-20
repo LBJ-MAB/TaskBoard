@@ -49,7 +49,10 @@ if (app.Environment.IsDevelopment())
 // implementing MapGroup for simplification:
 var tasks = app.MapGroup("/tasks");
 // using methods rather than lambdas
-tasks.MapGet("/", GetAllTasks);         // method for getting all tasks
+tasks.MapGet("/", async (ITaskService service, TaskDb db, Microsoft.Extensions.Logging.ILogger logger) =>
+{
+    await service.GetAllTasks(db, logger);
+});         
 tasks.MapGet("/{id}", async (int id, ITaskService service, TaskDb db, Microsoft.Extensions.Logging.ILogger logger) =>
 {
     // I am passing a TaskDb db here. When I do this across all the MapGet methods 
@@ -59,6 +62,7 @@ tasks.MapGet("/{id}", async (int id, ITaskService service, TaskDb db, Microsoft.
     // know which TaskDb I am referring to?
     await service.GetTask(id, db, logger);
 }); 
+
 tasks.MapGet("/complete", GetCompleteTasks);    // method for getting completed tasks
 tasks.MapPost("/", AddTask);            // method for adding a task to the list
 tasks.MapPut("/{id}", UpdateTask);      // method for updating a task
