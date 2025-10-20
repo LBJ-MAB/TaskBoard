@@ -33,7 +33,6 @@ public class InMemoryTaskService : ITaskService
         logger.LogInformation($"Retrieved task with id {id}");
         return TypedResults.Ok(task);
     }
-
     public async Task<IResult> GetAllTasks(TaskDb db, ILogger logger)  
     {
         // log the beginning of the request
@@ -48,9 +47,19 @@ public class InMemoryTaskService : ITaskService
         logger.LogInformation($"Retrieved {tasks.Count} tasks");
         return TypedResults.Ok(tasks);
     }
-    public async Task<IResult> GetCompleteTasks() 
+    
+    public async Task<IResult> GetCompleteTasks(TaskDb db, ILogger logger) 
     {
-        
+        logger.LogInformation($"Requesting all complete tasks");
+        var completeTasks = await db.Tasks.Where(t => t.IsComplete).OrderBy(t => t.Priority).ToListAsync();
+        if (completeTasks == null || !completeTasks.Any())
+        {
+            logger.LogInformation("Could not find any complete tasks");
+            return TypedResults.BadRequest("Could not find any complete tasks");
+        }
+
+        logger.LogInformation($"Retrieved {completeTasks.Count} complete tasks");
+        return TypedResults.Ok(completeTasks);
     }
     public async Task<IResult> AddTask() 
     {

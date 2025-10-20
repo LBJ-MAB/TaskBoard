@@ -62,8 +62,11 @@ tasks.MapGet("/{id}", async (int id, ITaskService service, TaskDb db, Microsoft.
     // know which TaskDb I am referring to?
     await service.GetTask(id, db, logger);
 }); 
+tasks.MapGet("/complete", async (ITaskService service, TaskDb db, Microsoft.Extensions.Logging.ILogger logger) =>
+{
+    await service.GetCompleteTasks(db, logger);
+});  
 
-tasks.MapGet("/complete", GetCompleteTasks);    // method for getting completed tasks
 tasks.MapPost("/", AddTask);            // method for adding a task to the list
 tasks.MapPut("/{id}", UpdateTask);      // method for updating a task
 tasks.MapDelete("/{id}", DeleteTask);   // method for deleting a task
@@ -107,6 +110,7 @@ static async Task<IResult> GetTask(TaskDb db, int id, ILogger<Program> loggerInp
     loggerInput.LogInformation($"Retrieved task with id {id}");
     return TypedResults.Ok(task);
 }
+
 // get all complete tasks
 static async Task<IResult> GetCompleteTasks(TaskDb db, ILogger<Program> loggerInput)
 {
