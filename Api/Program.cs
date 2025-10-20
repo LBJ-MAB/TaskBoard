@@ -8,9 +8,6 @@ using Serilog;                          // for logger configuration
 var builder = WebApplication.CreateBuilder(args);
 // making an in-memory database ->
 builder.Services.AddDbContext<TaskDb>(opt => opt.UseInMemoryDatabase("Tasks"));
-// adding tasks service
-builder.Services.AddSingleton<ITaskService, InMemoryTaskService>();
-
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApiDocument(config =>
@@ -25,6 +22,10 @@ var serilogLogger = new LoggerConfiguration()
     .CreateLogger();
 Log.Logger = serilogLogger;
 builder.Host.UseSerilog();
+
+// adding tasks service
+// builder.Services.AddScoped<ITaskService>(new InMemoryTaskService(TaskDb, ILogger<InMemoryTaskService>));
+builder.Services.AddScoped<ITaskService, InMemoryTaskService>();
 
 // build the web application
 var app = builder.Build();

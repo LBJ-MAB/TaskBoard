@@ -20,72 +20,81 @@ public interface ITaskService
 // make "concrete" implementation for in memory database
 public class InMemoryTaskService : ITaskService
 {
-    public async Task<IResult> GetTask(int id, TaskDb db, ILogger logger)
+    private readonly TaskDb _db;
+    private readonly ILogger _logger;
+    
+    public InMemoryTaskService(TaskDb db, ILogger logger)
     {
-        logger.LogInformation($"Requesting task with id {id}");
-        var task = await db.Tasks.FindAsync(id);
+        _db = db;
+        _logger = logger;
+    }
+    
+    public async Task<IResult> GetTask(int id)
+    {
+        _logger.LogInformation($"Requesting task with id {id}");
+        var task = await _db.Tasks.FindAsync(id);
 
         if (task is null)
         {
-            logger.LogWarning($"Could not find task with id {id}");
+            _logger.LogWarning($"Could not find task with id {id}");
             return TypedResults.BadRequest($"Could not find task with id {id}");
         }
 
-        logger.LogInformation($"Retrieved task with id {id}");
+        _logger.LogInformation($"Retrieved task with id {id}");
         return TypedResults.Ok(task);
     }
-    public async Task<IResult> GetAllTasks(TaskDb db, ILogger logger)  
+    public async Task<IResult> GetAllTasks()  
     {
         // log the beginning of the request
-        logger.LogInformation("Requesting all tasks");
+        _logger.LogInformation("Requesting all tasks");
         // get all tasks
-        var tasks = await db.Tasks.OrderBy(t => t.IsComplete).ThenBy(t => t.Priority).ToListAsync();
+        var tasks = await _db.Tasks.OrderBy(t => t.IsComplete).ThenBy(t => t.Priority).ToListAsync();
         if (tasks == null || !tasks.Any())
         {
-            logger.LogWarning("No tasks were found");
+            _logger.LogWarning("No tasks were found");
             return TypedResults.BadRequest("no tasks were found");
         }
-        logger.LogInformation($"Retrieved {tasks.Count} tasks");
+        _logger.LogInformation($"Retrieved {tasks.Count} tasks");
         return TypedResults.Ok(tasks);
     }
-    public async Task<IResult> GetCompleteTasks(TaskDb db, ILogger logger) 
+    public async Task<IResult> GetCompleteTasks() 
     {
-        logger.LogInformation($"Requesting all complete tasks");
-        var completeTasks = await db.Tasks.Where(t => t.IsComplete).OrderBy(t => t.Priority).ToListAsync();
+        _logger.LogInformation($"Requesting all complete tasks");
+        var completeTasks = await _db.Tasks.Where(t => t.IsComplete).OrderBy(t => t.Priority).ToListAsync();
         if (completeTasks == null || !completeTasks.Any())
         {
-            logger.LogInformation("Could not find any complete tasks");
+            _logger.LogInformation("Could not find any complete tasks");
             return TypedResults.BadRequest("Could not find any complete tasks");
         }
 
-        logger.LogInformation($"Retrieved {completeTasks.Count} complete tasks");
+        _logger.LogInformation($"Retrieved {completeTasks.Count} complete tasks");
         return TypedResults.Ok(completeTasks);
     }
-    public async Task<IResult> AddTask(TaskItem task, TaskDb db, ILogger logger) 
+    public async Task<IResult> AddTask(TaskItem task) 
     {
-        logger.LogInformation("adding task");
+        _logger.LogInformation("adding task");
         try
         {
-            db.Tasks.Add(task);
-            await db.SaveChangesAsync();
+            _db.Tasks.Add(task);
+            await _db.SaveChangesAsync();
         }
         catch
         {
-            logger.LogWarning("unable to add task");
+            _logger.LogWarning("unable to add task");
             return TypedResults.BadRequest("unable to add task");
         }
 
-        logger.LogInformation("successfully added task");
+        _logger.LogInformation("successfully added task");
         return TypedResults.Created($"/tasks/{task.Id}", task);
     }
-    public async Task<IResult> UpdateTask(int id, TaskItem inputTask, TaskDb db, ILogger logger) 
+    public async Task<IResult> UpdateTask(int id, TaskItem inputTask) 
     {
-        logger.LogInformation($"updating task {id}");
-        var task = await db.Tasks.FindAsync(id);
+        _logger.LogInformation($"updating task {id}");
+        var task = await _db.Tasks.FindAsync(id);
 
         if (task is null)
         {
-            logger.LogWarning($"unable to update task {id}");
+            _logger.LogWarning($"unable to update task {id}");
             return TypedResults.BadRequest($"unable to update task {id}");
         }
 
@@ -93,26 +102,26 @@ public class InMemoryTaskService : ITaskService
         task.IsComplete = inputTask.IsComplete;
         task.Priority = inputTask.Priority;
 
-        await db.SaveChangesAsync();
+        await _db.SaveChangesAsync();
 
-        logger.LogInformation($"successfully updated task {id}");
+        _logger.LogInformation($"successfully updated task {id}");
         return TypedResults.NoContent();
     }
-    public async Task<IResult> DeleteTask(int id, TaskDb db, ILogger logger) 
+    public async Task<IResult> DeleteTask(int id) 
     {
-        logger.LogInformation($"attempting to delete task {id}");
-        var task = await db.Tasks.FindAsync(id);
+        _logger.LogInformation($"attempting to delete task {id}");
+        var task = await _db.Tasks.FindAsync(id);
 
         if (task is null)
         {
-            logger.LogWarning($"unable to find task with id {id}");
+            _logger.LogWarning($"unable to find task with id {id}");
             return TypedResults.BadRequest($"unable to find task with id {id}");
         }
 
-        db.Tasks.Remove(task);
-        await db.SaveChangesAsync();
+        _db.Tasks.Remove(task);
+        await _db.SaveChangesAsync();
 
-        logger.LogInformation($"successfully deleted task {id}");
+        _logger.LogInformation($"successfully deleted task {id}");
         return TypedResults.NoContent();
     }
 }
