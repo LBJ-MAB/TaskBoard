@@ -48,7 +48,6 @@ if (app.Environment.IsDevelopment())
 
 // implementing MapGroup for simplification:
 var tasks = app.MapGroup("/tasks");
-// using methods rather than lambdas
 tasks.MapGet("/", async (ITaskService service, TaskDb db, Microsoft.Extensions.Logging.ILogger logger) =>
 {
     await service.GetAllTasks(db, logger);
@@ -66,10 +65,18 @@ tasks.MapGet("/complete", async (ITaskService service, TaskDb db, Microsoft.Exte
 {
     await service.GetCompleteTasks(db, logger);
 });  
-
-tasks.MapPost("/", AddTask);            // method for adding a task to the list
-tasks.MapPut("/{id}", UpdateTask);      // method for updating a task
-tasks.MapDelete("/{id}", DeleteTask);   // method for deleting a task
+tasks.MapPost("/", async (TaskItem task, ITaskService service, TaskDb db, Microsoft.Extensions.Logging.ILogger logger) =>
+{
+    await service.AddTask(task, db, logger);
+});   
+tasks.MapPut("/{id}", async (int id, TaskItem inputTask, ITaskService service, TaskDb db, Microsoft.Extensions.Logging.ILogger logger) =>
+{
+    await service.UpdateTask(id, inputTask, db, logger);
+});    
+tasks.MapDelete("/{id}", async (int id, ITaskService service, TaskDb db, Microsoft.Extensions.Logging.ILogger logger) =>
+{
+    await service.DeleteTask();
+});   
 
 
 
@@ -110,7 +117,6 @@ static async Task<IResult> GetTask(TaskDb db, int id, ILogger<Program> loggerInp
     loggerInput.LogInformation($"Retrieved task with id {id}");
     return TypedResults.Ok(task);
 }
-
 // get all complete tasks
 static async Task<IResult> GetCompleteTasks(TaskDb db, ILogger<Program> loggerInput)
 {
