@@ -51,6 +51,7 @@ tasks.MapPut("/{id}", UpdateTask);      // method for updating a task
 tasks.MapDelete("/{id}", DeleteTask);   // method for deleting a task
 
 
+// ---------- THESE ALL NEED MIGRATING TO APPLICATION -----------
 // get all tasks
 static async Task<IResult> GetAllTasks(TaskDb db, ILogger<Program> loggerInput)
 {
