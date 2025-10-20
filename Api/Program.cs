@@ -2,13 +2,17 @@ using Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Application;
 using Domain;
-using Infrastructure;
+using Infrastructure;           // I'm not sure program should be using this now
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 // dependency injection
-// making an inmemory data base ->
+// WE WILL DEPENDENCY INJECT THE ITaskService -> service here
+// making an in-memory data base ->
 builder.Services.AddDbContext<TaskDb>(opt => opt.UseInMemoryDatabase("Tasks"));
+// adding tasks service
+builder.Services.AddSingleton<ITaskService>(new InMemoryTaskService());
+
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApiDocument(config =>
@@ -46,17 +50,29 @@ if (app.Environment.IsDevelopment())
 var tasks = app.MapGroup("/tasks");
 // using methods rather than lambdas
 tasks.MapGet("/", GetAllTasks);         // method for getting all tasks
-tasks.MapGet("/{id}", (int id, ITaskService service) =>
+tasks.MapGet("/{id}", async (int id, ITaskService service, TaskDb db, Microsoft.Extensions.Logging.ILogger logger) =>
 {
-    
-});         // method for getting a single task
+    // I am passing a TaskDb db here. When I do this across all the MapGet methods 
+    // does the program know to work with the same in-memory database because I
+    // have given the db the name of "Tasks" at the top? 
+    // If so, if I were to create another database also of type TaskDb, how would it 
+    // know which TaskDb I am referring to?
+    await service.GetTask(id, db, logger);
+}); 
 tasks.MapGet("/complete", GetCompleteTasks);    // method for getting completed tasks
 tasks.MapPost("/", AddTask);            // method for adding a task to the list
 tasks.MapPut("/{id}", UpdateTask);      // method for updating a task
 tasks.MapDelete("/{id}", DeleteTask);   // method for deleting a task
 
 
-// ---------- THESE ALL NEED MIGRATING TO APPLICATION -----------
+
+
+
+
+
+
+
+// ---------- THESE ALL NEED MOVING TO APPLICATION -----------
 // get all tasks
 static async Task<IResult> GetAllTasks(TaskDb db, ILogger<Program> loggerInput)
 {

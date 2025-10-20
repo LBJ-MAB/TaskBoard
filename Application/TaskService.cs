@@ -1,13 +1,14 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using Serilog;
+using Microsoft.Extensions.Logging;
+using Infrastructure;
 
 namespace Application;
 
 // define interface for generic task service
 public interface ITaskService
 {
-    Task GetTask();
+    Task GetTask(int id, DbContext taskDb, ILogger logger);
     Task GetAllTasks();
     Task GetCompleteTasks();
     Task AddTask();
@@ -18,14 +19,10 @@ public interface ITaskService
 // make "concrete" implementation for in memory database
 public class InMemoryTaskService : ITaskService
 {
-    public async Task<IResult> GetTask(DbContext taskDb, int id, ILogger logger)
+    public async Task<IResult> GetTask(int id, TaskDb db, ILogger logger)
     {
         logger.LogInformation($"Requesting task with id {id}");
-        // how can I pass a generic db context?
-        // it doesn't recognise Tasks. I can get around this by passing the actual
-        // implementation of TaskDb, but that defeats the point as I haven't separated 
-        // infrastructure from the service
-        var task = await taskDb.Tasks.FindAsync(id);
+        var task = await db.Tasks.FindAsync(id);
 
         if (task is null)
         {
@@ -37,9 +34,19 @@ public class InMemoryTaskService : ITaskService
         return TypedResults.Ok(task);
     }
 
-    public async Task<IResult> GetAllTasks() 
+    public async Task<IResult> GetAllTasks(TaskDb db, ILogger logger)  
     {
-        
+        // log the beginning of the request
+        logger.LogInformation("Requesting all tasks");
+        // get all tasks
+        var tasks = await db.Tasks.OrderBy(t => t.IsComplete).ThenBy(t => t.Priority).ToListAsync();
+        if (tasks == null || !tasks.Any())
+        {
+            logger.LogWarning("No tasks were found");
+            return TypedResults.BadRequest("no tasks were found");
+        }
+        logger.LogInformation($"Retrieved {tasks.Count} tasks");
+        return TypedResults.Ok(tasks);
     }
     public async Task<IResult> GetCompleteTasks() 
     {
