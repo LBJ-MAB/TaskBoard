@@ -1,17 +1,15 @@
-using Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-using Application;
-using Domain;
-using Infrastructure;           // I'm not sure program should be using this now
-using Serilog;
+using Microsoft.EntityFrameworkCore;    // for UseInMemoryDatabase()
+using Application;                      // for TaskService
+using Domain;                           // for TaskItem
+using Infrastructure;                   // for TaskDb
+using Microsoft.AspNetCore.Mvc; 
+using Serilog;                          // for logger configuration
 
 var builder = WebApplication.CreateBuilder(args);
-// dependency injection
-// WE WILL DEPENDENCY INJECT THE ITaskService -> service here
-// making an in-memory data base ->
+// making an in-memory database ->
 builder.Services.AddDbContext<TaskDb>(opt => opt.UseInMemoryDatabase("Tasks"));
 // adding tasks service
-builder.Services.AddSingleton<ITaskService>(new InMemoryTaskService());
+builder.Services.AddSingleton<ITaskService, InMemoryTaskService>();
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddEndpointsApiExplorer();
@@ -48,11 +46,11 @@ if (app.Environment.IsDevelopment())
 
 // implementing MapGroup for simplification:
 var tasks = app.MapGroup("/tasks");
-tasks.MapGet("/", async (ITaskService service, TaskDb db, Microsoft.Extensions.Logging.ILogger logger) =>
+tasks.MapGet("/", async (ITaskService service, TaskDb db, [FromServices] ILogger<InMemoryTaskService> logger) =>
 {
     await service.GetAllTasks(db, logger);
 });         
-tasks.MapGet("/{id}", async (int id, ITaskService service, TaskDb db, Microsoft.Extensions.Logging.ILogger logger) =>
+tasks.MapGet("/{id}", async (int id, ITaskService service, TaskDb db, [FromServices] ILogger<InMemoryTaskService> logger) =>
 {
     // I am passing a TaskDb db here. When I do this across all the MapGet methods 
     // does the program know to work with the same in-memory database because I
@@ -61,21 +59,21 @@ tasks.MapGet("/{id}", async (int id, ITaskService service, TaskDb db, Microsoft.
     // know which TaskDb I am referring to?
     await service.GetTask(id, db, logger);
 }); 
-tasks.MapGet("/complete", async (ITaskService service, TaskDb db, Microsoft.Extensions.Logging.ILogger logger) =>
+tasks.MapGet("/complete", async (ITaskService service, TaskDb db, [FromServices] ILogger<InMemoryTaskService> logger) =>
 {
     await service.GetCompleteTasks(db, logger);
 });  
-tasks.MapPost("/", async (TaskItem task, ITaskService service, TaskDb db, Microsoft.Extensions.Logging.ILogger logger) =>
+tasks.MapPost("/", async (TaskItem task, ITaskService service, TaskDb db, [FromServices] ILogger<InMemoryTaskService> logger) =>
 {
     await service.AddTask(task, db, logger);
 });   
-tasks.MapPut("/{id}", async (int id, TaskItem inputTask, ITaskService service, TaskDb db, Microsoft.Extensions.Logging.ILogger logger) =>
+tasks.MapPut("/{id}", async (int id, TaskItem inputTask, ITaskService service, TaskDb db, [FromServices] ILogger<InMemoryTaskService> logger) =>
 {
     await service.UpdateTask(id, inputTask, db, logger);
 });    
-tasks.MapDelete("/{id}", async (int id, ITaskService service, TaskDb db, Microsoft.Extensions.Logging.ILogger logger) =>
+tasks.MapDelete("/{id}", async (int id, ITaskService service, TaskDb db, [FromServices] ILogger<InMemoryTaskService> logger) =>
 {
-    await service.DeleteTask();
+    await service.DeleteTask(id, db, logger);
 });   
 
 app.Run();

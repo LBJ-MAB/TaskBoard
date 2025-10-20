@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v9.0": {
       "Api/1.0.0": {
         "dependencies": {
+          "Application": "1.0.0",
           "Domain": "1.0.0",
           "Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "9.0.10",
@@ -474,6 +475,20 @@
           }
         }
       },
+      "Application/1.0.0": {
+        "dependencies": {
+          "Domain": "1.0.0",
+          "Infrastructure": "1.0.0",
+          "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "9.0.10",
+          "Microsoft.EntityFrameworkCore.InMemory": "9.0.10"
+        },
+        "runtime": {
+          "Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Domain/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Abstractions": "2.3.0"
@@ -820,6 +835,11 @@
       "sha512": "sha512-SgMOdxbz8X65z8hraIs6hOEdnkH6hESTAIUa7viEngHOYaH+6q5XJmwr1+yb9vJpNQ19hCQY69xbFsLtXpobQA==",
       "path": "yamldotnet/16.3.0",
       "hashPath": "yamldotnet.16.3.0.nupkg.sha512"
+    },
+    "Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Domain/1.0.0": {
       "type": "project",

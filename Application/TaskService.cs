@@ -1,20 +1,20 @@
-using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-using Infrastructure;
-using Domain;
+using Microsoft.AspNetCore.Http;            // for IResult
+using Microsoft.EntityFrameworkCore;        // for .ToListAsync()???
+using Microsoft.Extensions.Logging;         // for logger
+using Infrastructure;                       // for TaskDb
+using Domain;                               // for TaskItem
 
 namespace Application;
 
 // define interface for generic task service
 public interface ITaskService
 {
-    Task GetTask(int id, DbContext taskDb, ILogger logger);
-    Task GetAllTasks();
-    Task GetCompleteTasks();
-    Task AddTask();
-    Task UpdateTask();
-    Task DeleteTask();
+    Task<IResult> GetTask(int id, TaskDb db, ILogger logger);
+    Task<IResult> GetAllTasks(TaskDb db, ILogger logger);
+    Task<IResult> GetCompleteTasks(TaskDb db, ILogger logger);
+    Task<IResult> AddTask(TaskItem task, TaskDb db, ILogger logger);
+    Task<IResult> UpdateTask(int id, TaskItem inputTask, TaskDb db, ILogger logger);
+    Task<IResult> DeleteTask(int id, TaskDb db, ILogger logger);
 }
 
 // make "concrete" implementation for in memory database
@@ -115,5 +115,4 @@ public class InMemoryTaskService : ITaskService
         logger.LogInformation($"successfully deleted task {id}");
         return TypedResults.NoContent();
     }
-}
 }
