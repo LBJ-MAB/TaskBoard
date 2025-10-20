@@ -216,3 +216,92 @@ System.InvalidOperationException: No service for type 'Microsoft.Extensions.Logg
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
 2025-10-20 15:01:09.234 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks - 500 null text/plain; charset=utf-8 138.1448ms
 2025-10-20 15:07:50.696 +01:00 [INF] Application is shutting down...
+2025-10-20 15:13:15.593 +01:00 [INF] Now listening on: http://localhost:5001
+2025-10-20 15:13:15.635 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-20 15:13:15.637 +01:00 [INF] Hosting environment: Development
+2025-10-20 15:13:15.638 +01:00 [INF] Content root path: C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api
+2025-10-20 15:13:16.506 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/ - null null
+2025-10-20 15:13:16.587 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/ - 404 0 null 81.7888ms
+2025-10-20 15:13:16.605 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5001/, Response status code: 404
+2025-10-20 15:13:20.015 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger - null null
+2025-10-20 15:13:20.025 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger - 302 0 null 10.6894ms
+2025-10-20 15:13:20.032 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/index.html - null null
+2025-10-20 15:13:20.128 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/index.html - 200 null text/html; charset=utf-8 96.404ms
+2025-10-20 15:13:20.334 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - null null
+2025-10-20 15:13:20.352 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-10-20 15:13:20.688 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - 200 null application/json; charset=utf-8 353.4675ms
+2025-10-20 15:13:26.999 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks - null null
+2025-10-20 15:13:27.012 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:13:27.219 +01:00 [INF] Requesting all tasks
+2025-10-20 15:13:27.743 +01:00 [WRN] No tasks were found
+2025-10-20 15:13:27.745 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:13:27.750 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks - 200 0 null 751.2457ms
+2025-10-20 15:16:42.995 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/tasks - application/json 62
+2025-10-20 15:16:43.000 +01:00 [INF] Executing endpoint 'HTTP: POST /tasks/'
+2025-10-20 15:16:43.016 +01:00 [INF] adding task
+2025-10-20 15:16:43.138 +01:00 [INF] Saved 1 entities to in-memory store.
+2025-10-20 15:16:43.144 +01:00 [INF] successfully added task
+2025-10-20 15:16:43.146 +01:00 [INF] Executed endpoint 'HTTP: POST /tasks/'
+2025-10-20 15:16:43.148 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/tasks - 200 0 null 152.5332ms
+2025-10-20 15:17:02.852 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks - null null
+2025-10-20 15:17:02.858 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:17:02.861 +01:00 [INF] Requesting all tasks
+2025-10-20 15:17:02.883 +01:00 [INF] Retrieved 1 tasks
+2025-10-20 15:17:02.886 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:17:02.887 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks - 200 0 null 34.6563ms
+2025-10-20 15:17:06.997 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks - null null
+2025-10-20 15:17:07.004 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:17:07.005 +01:00 [INF] Requesting all tasks
+2025-10-20 15:17:07.007 +01:00 [INF] Retrieved 1 tasks
+2025-10-20 15:17:07.010 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:17:07.013 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks - 200 0 null 16.495ms
+2025-10-20 15:17:07.469 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks - null null
+2025-10-20 15:17:07.472 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:17:07.473 +01:00 [INF] Requesting all tasks
+2025-10-20 15:17:07.475 +01:00 [INF] Retrieved 1 tasks
+2025-10-20 15:17:07.477 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:17:07.478 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks - 200 0 null 9.5133ms
+2025-10-20 15:17:07.875 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks - null null
+2025-10-20 15:17:07.880 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:17:07.882 +01:00 [INF] Requesting all tasks
+2025-10-20 15:17:07.885 +01:00 [INF] Retrieved 1 tasks
+2025-10-20 15:17:07.886 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:17:07.888 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks - 200 0 null 12.7268ms
+2025-10-20 15:17:08.209 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks - null null
+2025-10-20 15:17:08.214 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:17:08.216 +01:00 [INF] Requesting all tasks
+2025-10-20 15:17:08.217 +01:00 [INF] Retrieved 1 tasks
+2025-10-20 15:17:08.219 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:17:08.221 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks - 200 0 null 11.7204ms
+2025-10-20 15:17:56.824 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks/1 - null null
+2025-10-20 15:17:56.837 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/{id}'
+2025-10-20 15:17:56.845 +01:00 [INF] Requesting task with id 1
+2025-10-20 15:17:56.914 +01:00 [INF] Retrieved task with id 1
+2025-10-20 15:17:56.916 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/{id}'
+2025-10-20 15:17:56.919 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks/1 - 200 0 null 94.3425ms
+2025-10-20 15:18:12.068 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks/2 - null null
+2025-10-20 15:18:12.079 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/{id}'
+2025-10-20 15:18:12.083 +01:00 [INF] Requesting task with id 2
+2025-10-20 15:18:12.089 +01:00 [WRN] Could not find task with id 2
+2025-10-20 15:18:12.093 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/{id}'
+2025-10-20 15:18:12.097 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks/2 - 200 0 null 28.7512ms
+2025-10-20 15:18:21.423 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks/84 - null null
+2025-10-20 15:18:21.433 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/{id}'
+2025-10-20 15:18:21.437 +01:00 [INF] Requesting task with id 84
+2025-10-20 15:18:21.439 +01:00 [WRN] Could not find task with id 84
+2025-10-20 15:18:21.441 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/{id}'
+2025-10-20 15:18:21.444 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks/84 - 200 0 null 20.4452ms
+2025-10-20 15:20:06.066 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks/complete - null null
+2025-10-20 15:20:06.075 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/complete'
+2025-10-20 15:20:06.080 +01:00 [INF] Requesting all complete tasks
+2025-10-20 15:20:06.088 +01:00 [INF] Could not find any complete tasks
+2025-10-20 15:20:06.089 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/complete'
+2025-10-20 15:20:06.092 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks/complete - 200 0 null 26.3698ms
+2025-10-20 15:22:17.343 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/index.html - null null
+2025-10-20 15:22:17.349 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/index.html - 200 null text/html; charset=utf-8 6.8266ms
+2025-10-20 15:22:17.496 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - null null
+2025-10-20 15:22:17.500 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/favicon-32x32.png - null null
+2025-10-20 15:22:17.505 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - 200 null application/json; charset=utf-8 8.9058ms
+2025-10-20 15:22:17.522 +01:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-10-20 15:22:17.525 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/favicon-32x32.png - 200 628 image/png 25.6568ms
+2025-10-20 15:22:22.718 +01:00 [INF] Application is shutting down...
