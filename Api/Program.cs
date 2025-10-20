@@ -1,11 +1,13 @@
 using Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Application;
 using Domain;
 using Infrastructure;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 // dependency injection
+// making an inmemory data base ->
 builder.Services.AddDbContext<TaskDb>(opt => opt.UseInMemoryDatabase("Tasks"));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddEndpointsApiExplorer();
@@ -44,7 +46,10 @@ if (app.Environment.IsDevelopment())
 var tasks = app.MapGroup("/tasks");
 // using methods rather than lambdas
 tasks.MapGet("/", GetAllTasks);         // method for getting all tasks
-tasks.MapGet("/{id}", GetTask);         // method for getting a single task
+tasks.MapGet("/{id}", (int id, ITaskService service) =>
+{
+    
+});         // method for getting a single task
 tasks.MapGet("/complete", GetCompleteTasks);    // method for getting completed tasks
 tasks.MapPost("/", AddTask);            // method for adding a task to the list
 tasks.MapPut("/{id}", UpdateTask);      // method for updating a task
