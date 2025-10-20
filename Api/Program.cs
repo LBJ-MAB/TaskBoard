@@ -50,6 +50,7 @@ tasks.MapPost("/", AddTask);            // method for adding a task to the list
 tasks.MapPut("/{id}", UpdateTask);      // method for updating a task
 tasks.MapDelete("/{id}", DeleteTask);   // method for deleting a task
 
+
 // get all tasks
 static async Task<IResult> GetAllTasks(TaskDb db, ILogger<Program> loggerInput)
 {
