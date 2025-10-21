@@ -131,6 +131,30 @@ public class InMemoryTaskServiceIntegrationTests
         // assert
         result.Should().BeOfType<NoContent>();
     }
+
+    [Test]
+    public async Task DeleteTask_ShouldReturnBadRequest_WhenNoTaskWithGivenId()
+    {
+        // arrange
+        var task = new TaskItem {  Name = "task", IsComplete = false, Priority = 1 };
+        var addTask = await _service.AddTask(task);
+        var result = await _service.DeleteTask(2);
+
+        // assert
+        result.Should().BeOfType<BadRequest<string>>();
+    }
+    
+    [Test]
+    public async Task DeleteTask_ShouldReturnNoContent_WhenTaskDeleted()
+    {
+        // arrange
+        var task = new TaskItem {  Name = "task", IsComplete = false, Priority = 1 };
+        var addTask = await _service.AddTask(task);
+        var result = await _service.DeleteTask(1);
+
+        // assert
+        result.Should().BeOfType<NoContent>();
+    }
     
     
     [TearDown]
