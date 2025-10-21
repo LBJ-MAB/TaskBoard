@@ -155,6 +155,50 @@ public class InMemoryTaskServiceIntegrationTests
         // assert
         result.Should().BeOfType<NoContent>();
     }
+
+    [Test]
+    public async Task AddTask_ShouldReturnCorrectTask_WhenTaskAdded()
+    {
+        // arrange
+        var task = new TaskItem { Name = "make integration test", IsComplete = false, Priority = 1 };
+        var result = await _service.AddTask(task);
+        var createdResult = result as Created<TaskItem>;
+
+        // assert
+        createdResult.Should().NotBeNull();
+        createdResult!.Value.Should().BeEquivalentTo(task);
+    }
+
+    [Test]
+    public async Task GetAllTasks_ShouldReturnCorrectLength()
+    {
+        // arrange
+        var numTasksToBeAdded = 5;
+        for (int taskNum = 0; taskNum < numTasksToBeAdded; taskNum++)
+        {
+            var task = new TaskItem { Name = $"task {taskNum}", IsComplete = false, Priority = 1 };
+            var addTask = await _service.AddTask(task);
+        }
+
+        var result = await _service.GetAllTasks();
+        var okResult = result as Ok<List<TaskItem>>;
+
+        // assert
+        okResult!.Value.Should().HaveCount(numTasksToBeAdded);
+    }
+
+    [Test]
+    public async Task GetTask_ShouldReturnCorrectTask()
+    {
+        // arrange
+        var task = new TaskItem { Name = "task", IsComplete = false, Priority = 1 };
+        var addTask = await _service.AddTask(task);
+        var result = await _service.GetTask(1);
+        var okResult = result as Ok<TaskItem>;
+
+        // assert
+        okResult!.Value.Should().BeEquivalentTo(task);
+    }
     
     
     [TearDown]
@@ -163,5 +207,4 @@ public class InMemoryTaskServiceIntegrationTests
         _db.Database.EnsureDeleted();
         _db.Dispose();
     }
-    
 }
