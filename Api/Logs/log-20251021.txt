@@ -1,0 +1,88 @@
+2025-10-21 09:06:47.612 +01:00 [INF] Now listening on: http://localhost:5001
+2025-10-21 09:06:47.658 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-21 09:06:47.662 +01:00 [INF] Hosting environment: Development
+2025-10-21 09:06:47.664 +01:00 [INF] Content root path: C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api
+2025-10-21 09:06:48.193 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/ - null null
+2025-10-21 09:06:48.332 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/ - 404 0 null 139.5886ms
+2025-10-21 09:06:48.351 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5001/, Response status code: 404
+2025-10-21 09:06:53.649 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger - null null
+2025-10-21 09:06:53.666 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger - 302 0 null 18.2183ms
+2025-10-21 09:06:53.680 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/index.html - null null
+2025-10-21 09:06:53.985 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/index.html - 200 null text/html; charset=utf-8 305.6573ms
+2025-10-21 09:06:54.441 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - null null
+2025-10-21 09:06:54.516 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-10-21 09:06:55.166 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - 200 null application/json; charset=utf-8 725.4541ms
+2025-10-21 09:07:03.019 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks - null null
+2025-10-21 09:07:03.069 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/'
+2025-10-21 09:07:03.622 +01:00 [INF] Requesting all tasks
+2025-10-21 09:07:04.705 +01:00 [WRN] No tasks were found
+2025-10-21 09:07:04.714 +01:00 [INF] Setting HTTP status code 400.
+2025-10-21 09:07:04.717 +01:00 [INF] Writing value of type 'String' as Json.
+2025-10-21 09:07:04.725 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/'
+2025-10-21 09:07:04.734 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks - 400 null application/json; charset=utf-8 1715.4182ms
+2025-10-21 09:07:25.926 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/tasks - application/json 62
+2025-10-21 09:07:25.934 +01:00 [INF] Executing endpoint 'HTTP: POST /tasks/'
+2025-10-21 09:07:25.963 +01:00 [INF] adding task
+2025-10-21 09:07:26.202 +01:00 [INF] Saved 1 entities to in-memory store.
+2025-10-21 09:07:26.214 +01:00 [INF] successfully added task
+2025-10-21 09:07:26.219 +01:00 [INF] Setting HTTP status code 201.
+2025-10-21 09:07:26.225 +01:00 [INF] Writing value of type 'TaskItem' as Json.
+2025-10-21 09:07:26.231 +01:00 [INF] Executed endpoint 'HTTP: POST /tasks/'
+2025-10-21 09:07:26.237 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/tasks - 201 null application/json; charset=utf-8 310.7488ms
+2025-10-21 09:08:10.618 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks/1 - null null
+2025-10-21 09:08:10.631 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/{id}'
+2025-10-21 09:08:10.642 +01:00 [INF] Requesting task with id 1
+2025-10-21 09:08:10.751 +01:00 [INF] Retrieved task with id 1
+2025-10-21 09:08:10.755 +01:00 [INF] Setting HTTP status code 200.
+2025-10-21 09:08:10.759 +01:00 [INF] Writing value of type 'TaskItem' as Json.
+2025-10-21 09:08:10.762 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/{id}'
+2025-10-21 09:08:10.766 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks/1 - 200 null application/json; charset=utf-8 147.8663ms
+2025-10-21 09:08:29.867 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks/complete - null null
+2025-10-21 09:08:29.880 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/complete'
+2025-10-21 09:08:29.888 +01:00 [INF] Requesting all complete tasks
+2025-10-21 09:08:29.901 +01:00 [INF] Could not find any complete tasks
+2025-10-21 09:08:29.906 +01:00 [INF] Setting HTTP status code 400.
+2025-10-21 09:08:29.908 +01:00 [INF] Writing value of type 'String' as Json.
+2025-10-21 09:08:29.911 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/complete'
+2025-10-21 09:08:29.914 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks/complete - 400 null application/json; charset=utf-8 47.4346ms
+2025-10-21 09:08:50.568 +01:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5001/tasks/1 - application/json 61
+2025-10-21 09:08:50.580 +01:00 [INF] Executing endpoint 'HTTP: PUT /tasks/{id}'
+2025-10-21 09:08:50.588 +01:00 [INF] updating task 1
+2025-10-21 09:08:50.604 +01:00 [INF] Saved 1 entities to in-memory store.
+2025-10-21 09:08:50.608 +01:00 [INF] successfully updated task 1
+2025-10-21 09:08:50.611 +01:00 [INF] Setting HTTP status code 204.
+2025-10-21 09:08:50.613 +01:00 [INF] Executed endpoint 'HTTP: PUT /tasks/{id}'
+2025-10-21 09:08:50.616 +01:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5001/tasks/1 - 204 null null 48.1173ms
+2025-10-21 09:08:56.671 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks/complete - null null
+2025-10-21 09:08:56.684 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/complete'
+2025-10-21 09:08:56.690 +01:00 [INF] Requesting all complete tasks
+2025-10-21 09:08:56.698 +01:00 [INF] Retrieved 1 complete tasks
+2025-10-21 09:08:56.701 +01:00 [INF] Setting HTTP status code 200.
+2025-10-21 09:08:56.713 +01:00 [INF] Writing value of type 'List`1' as Json.
+2025-10-21 09:08:56.717 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/complete'
+2025-10-21 09:08:56.721 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks/complete - 200 null application/json; charset=utf-8 49.838ms
+2025-10-21 09:09:07.277 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks - null null
+2025-10-21 09:09:07.286 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/'
+2025-10-21 09:09:07.292 +01:00 [INF] Requesting all tasks
+2025-10-21 09:09:07.298 +01:00 [INF] Retrieved 1 tasks
+2025-10-21 09:09:07.301 +01:00 [INF] Setting HTTP status code 200.
+2025-10-21 09:09:07.305 +01:00 [INF] Writing value of type 'List`1' as Json.
+2025-10-21 09:09:07.309 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/'
+2025-10-21 09:09:07.311 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks - 200 null application/json; charset=utf-8 34.4367ms
+2025-10-21 09:09:16.550 +01:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5001/tasks/1 - null null
+2025-10-21 09:09:16.565 +01:00 [INF] Executing endpoint 'HTTP: DELETE /tasks/{id}'
+2025-10-21 09:09:16.572 +01:00 [INF] attempting to delete task 1
+2025-10-21 09:09:16.587 +01:00 [INF] Saved 1 entities to in-memory store.
+2025-10-21 09:09:16.595 +01:00 [INF] successfully deleted task 1
+2025-10-21 09:09:16.597 +01:00 [INF] Setting HTTP status code 204.
+2025-10-21 09:09:16.600 +01:00 [INF] Executed endpoint 'HTTP: DELETE /tasks/{id}'
+2025-10-21 09:09:16.603 +01:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5001/tasks/1 - 204 null null 53.0399ms
+2025-10-21 09:09:37.447 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks - null null
+2025-10-21 09:09:37.457 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/'
+2025-10-21 09:09:37.461 +01:00 [INF] Requesting all tasks
+2025-10-21 09:09:37.466 +01:00 [WRN] No tasks were found
+2025-10-21 09:09:37.468 +01:00 [INF] Setting HTTP status code 400.
+2025-10-21 09:09:37.473 +01:00 [INF] Writing value of type 'String' as Json.
+2025-10-21 09:09:37.476 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/'
+2025-10-21 09:09:37.478 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks - 400 null application/json; charset=utf-8 31.6542ms
+2025-10-21 09:10:24.734 +01:00 [INF] Application is shutting down...

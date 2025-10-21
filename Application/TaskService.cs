@@ -23,7 +23,7 @@ public class InMemoryTaskService : ITaskService
     private readonly TaskDb _db;
     private readonly ILogger _logger;
     
-    public InMemoryTaskService(TaskDb db, ILogger logger)
+    public InMemoryTaskService(TaskDb db, ILogger<InMemoryTaskService> logger)
     {
         _db = db;
         _logger = logger;
