@@ -70,3 +70,5 @@ C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api\bin\Debug\net9.0\Serilog.Se
 C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api\bin\Debug\net9.0\Serilog.Sinks.Console.dll
 C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api\bin\Debug\net9.0\Serilog.Sinks.Debug.dll
 C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api\bin\Debug\net9.0\Serilog.Sinks.File.dll
+C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api\bin\Debug\net9.0\Application.dll
+C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api\bin\Debug\net9.0\Application.pdb

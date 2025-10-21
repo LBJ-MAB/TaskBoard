@@ -1,0 +1,411 @@
+2025-10-20 14:42:59.961 +01:00 [INF] Now listening on: http://localhost:5001
+2025-10-20 14:43:00.016 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-20 14:43:00.020 +01:00 [INF] Hosting environment: Development
+2025-10-20 14:43:00.024 +01:00 [INF] Content root path: C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api
+2025-10-20 14:43:00.489 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/ - null null
+2025-10-20 14:43:00.531 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Body was inferred but the method does not allow inferred body parameters.
+Below is the list of parameters that we found: 
+
+Parameter           | Source                        
+---------------------------------------------------------------------------------
+service             | Services (Inferred)
+db                  | Services (Inferred)
+logger              | Body (Inferred)
+
+
+Did you mean to register the "Body (Inferred)" parameter(s) as a Service or apply the [FromServices] or [FromBody] attribute?
+
+
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArguments(ParameterInfo[] parameters, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArgumentsAndInferMetadata(MethodInfo methodInfo, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.InferMetadata(MethodInfo methodInfo, RequestDelegateFactoryOptions options)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.CreateRouteEndpointBuilder(RouteEntry entry, RoutePattern groupPrefix, IReadOnlyList`1 groupConventions, IReadOnlyList`1 groupFinallyConventions)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.GetGroupedEndpoints(RouteGroupContext context)
+   at Microsoft.AspNetCore.Routing.RouteGroupBuilder.GroupEndpointDataSource.GetGroupedEndpointsWithNullablePrefix(RoutePattern prefix, IReadOnlyList`1 conventions, IReadOnlyList`1 finallyConventions, IServiceProvider applicationServices)
+   at Microsoft.AspNetCore.Routing.RouteGroupBuilder.GroupEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.CreateEndpointsUnsynchronized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.EnsureEndpointsInitialized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.DataSourceDependentCache`1.Initialize()
+   at System.Threading.LazyInitializer.EnsureInitializedCore[T](T& target, Boolean& initialized, Object& syncLock, Func`1 valueFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher..ctor(EndpointDataSource dataSource, Lifetime lifetime, Func`1 matcherBuilderFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherFactory.CreateMatcher(EndpointDataSource dataSource)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.InitializeCoreAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatcher|10_0(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task`1 matcherTask)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-10-20 14:43:00.657 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/ - 500 null text/html; charset=utf-8 169.8008ms
+2025-10-20 14:43:00.902 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/favicon.ico - null null
+2025-10-20 14:43:00.912 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Body was inferred but the method does not allow inferred body parameters.
+Below is the list of parameters that we found: 
+
+Parameter           | Source                        
+---------------------------------------------------------------------------------
+service             | Services (Inferred)
+db                  | Services (Inferred)
+logger              | Body (Inferred)
+
+
+Did you mean to register the "Body (Inferred)" parameter(s) as a Service or apply the [FromServices] or [FromBody] attribute?
+
+
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArguments(ParameterInfo[] parameters, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArgumentsAndInferMetadata(MethodInfo methodInfo, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.InferMetadata(MethodInfo methodInfo, RequestDelegateFactoryOptions options)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.CreateRouteEndpointBuilder(RouteEntry entry, RoutePattern groupPrefix, IReadOnlyList`1 groupConventions, IReadOnlyList`1 groupFinallyConventions)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.GetGroupedEndpoints(RouteGroupContext context)
+   at Microsoft.AspNetCore.Routing.RouteGroupBuilder.GroupEndpointDataSource.GetGroupedEndpointsWithNullablePrefix(RoutePattern prefix, IReadOnlyList`1 conventions, IReadOnlyList`1 finallyConventions, IServiceProvider applicationServices)
+   at Microsoft.AspNetCore.Routing.RouteGroupBuilder.GroupEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.CreateEndpointsUnsynchronized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.EnsureEndpointsInitialized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.DataSourceDependentCache`1.Initialize()
+   at System.Threading.LazyInitializer.EnsureInitializedCore[T](T& target, Boolean& initialized, Object& syncLock, Func`1 valueFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher..ctor(EndpointDataSource dataSource, Lifetime lifetime, Func`1 matcherBuilderFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherFactory.CreateMatcher(EndpointDataSource dataSource)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.InitializeCoreAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatcher|10_0(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task`1 matcherTask)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-10-20 14:43:00.926 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/favicon.ico - 500 null text/plain; charset=utf-8 24.2743ms
+2025-10-20 14:43:44.959 +01:00 [INF] Application is shutting down...
+2025-10-20 14:50:26.118 +01:00 [INF] Now listening on: http://localhost:5001
+2025-10-20 14:50:26.174 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-20 14:50:26.177 +01:00 [INF] Hosting environment: Development
+2025-10-20 14:50:26.179 +01:00 [INF] Content root path: C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api
+2025-10-20 14:50:26.826 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/ - null null
+2025-10-20 14:50:26.922 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/ - 404 0 null 97.937ms
+2025-10-20 14:50:26.941 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5001/, Response status code: 404
+2025-10-20 14:50:30.983 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger - null null
+2025-10-20 14:50:30.995 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger - 302 0 null 13.3116ms
+2025-10-20 14:50:31.003 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/index.html - null null
+2025-10-20 14:50:31.098 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/index.html - 200 null text/html; charset=utf-8 94.9986ms
+2025-10-20 14:50:31.117 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/swagger-ui.css - null null
+2025-10-20 14:50:31.119 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/index.css - null null
+2025-10-20 14:50:31.120 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/swagger-ui-bundle.js - null null
+2025-10-20 14:50:31.133 +01:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2025-10-20 14:50:31.139 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/index.css - 200 218 text/css 19.5779ms
+2025-10-20 14:50:31.143 +01:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-10-20 14:50:31.148 +01:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-10-20 14:50:31.156 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/swagger-ui.css - 200 154988 text/css 38.8378ms
+2025-10-20 14:50:31.159 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/swagger-ui-bundle.js - 200 1468327 text/javascript 38.9115ms
+2025-10-20 14:50:31.171 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/swagger-ui-standalone-preset.js - null null
+2025-10-20 14:50:31.197 +01:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-10-20 14:50:31.200 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/swagger-ui-standalone-preset.js - 200 229224 text/javascript 29.2978ms
+2025-10-20 14:50:31.389 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - null null
+2025-10-20 14:50:31.452 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-10-20 14:50:31.766 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - 200 null application/json; charset=utf-8 376.9347ms
+2025-10-20 14:51:38.653 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/tasks - application/json 62
+2025-10-20 14:51:38.693 +01:00 [INF] Executing endpoint 'HTTP: POST /tasks/'
+2025-10-20 14:51:39.031 +01:00 [INF] Executed endpoint 'HTTP: POST /tasks/'
+2025-10-20 14:51:39.033 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No service for type 'Microsoft.Extensions.Logging.ILogger' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at lambda_method5(Closure, Object, HttpContext, Object)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass101_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-10-20 14:51:39.049 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/tasks - 500 null text/plain; charset=utf-8 395.9041ms
+2025-10-20 14:52:11.844 +01:00 [INF] Application is shutting down...
+2025-10-20 14:52:48.339 +01:00 [INF] Now listening on: http://localhost:5001
+2025-10-20 14:52:48.378 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-20 14:52:48.380 +01:00 [INF] Hosting environment: Development
+2025-10-20 14:52:48.382 +01:00 [INF] Content root path: C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api
+2025-10-20 14:52:49.066 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/ - null null
+2025-10-20 14:52:49.094 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Body was inferred but the method does not allow inferred body parameters.
+Below is the list of parameters that we found: 
+
+Parameter           | Source                        
+---------------------------------------------------------------------------------
+service             | Services (Inferred)
+db                  | Services (Inferred)
+logger              | Body (Inferred)
+
+
+Did you mean to register the "Body (Inferred)" parameter(s) as a Service or apply the [FromServices] or [FromBody] attribute?
+
+
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArguments(ParameterInfo[] parameters, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArgumentsAndInferMetadata(MethodInfo methodInfo, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.InferMetadata(MethodInfo methodInfo, RequestDelegateFactoryOptions options)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.CreateRouteEndpointBuilder(RouteEntry entry, RoutePattern groupPrefix, IReadOnlyList`1 groupConventions, IReadOnlyList`1 groupFinallyConventions)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.GetGroupedEndpoints(RouteGroupContext context)
+   at Microsoft.AspNetCore.Routing.RouteGroupBuilder.GroupEndpointDataSource.GetGroupedEndpointsWithNullablePrefix(RoutePattern prefix, IReadOnlyList`1 conventions, IReadOnlyList`1 finallyConventions, IServiceProvider applicationServices)
+   at Microsoft.AspNetCore.Routing.RouteGroupBuilder.GroupEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.CreateEndpointsUnsynchronized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.EnsureEndpointsInitialized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.DataSourceDependentCache`1.Initialize()
+   at System.Threading.LazyInitializer.EnsureInitializedCore[T](T& target, Boolean& initialized, Object& syncLock, Func`1 valueFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher..ctor(EndpointDataSource dataSource, Lifetime lifetime, Func`1 matcherBuilderFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherFactory.CreateMatcher(EndpointDataSource dataSource)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.InitializeCoreAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatcher|10_0(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task`1 matcherTask)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-10-20 14:52:49.135 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/ - 500 null text/html; charset=utf-8 70.0998ms
+2025-10-20 14:52:49.325 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/favicon.ico - null null
+2025-10-20 14:52:49.336 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Body was inferred but the method does not allow inferred body parameters.
+Below is the list of parameters that we found: 
+
+Parameter           | Source                        
+---------------------------------------------------------------------------------
+service             | Services (Inferred)
+db                  | Services (Inferred)
+logger              | Body (Inferred)
+
+
+Did you mean to register the "Body (Inferred)" parameter(s) as a Service or apply the [FromServices] or [FromBody] attribute?
+
+
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArguments(ParameterInfo[] parameters, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArgumentsAndInferMetadata(MethodInfo methodInfo, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.InferMetadata(MethodInfo methodInfo, RequestDelegateFactoryOptions options)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.CreateRouteEndpointBuilder(RouteEntry entry, RoutePattern groupPrefix, IReadOnlyList`1 groupConventions, IReadOnlyList`1 groupFinallyConventions)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.GetGroupedEndpoints(RouteGroupContext context)
+   at Microsoft.AspNetCore.Routing.RouteGroupBuilder.GroupEndpointDataSource.GetGroupedEndpointsWithNullablePrefix(RoutePattern prefix, IReadOnlyList`1 conventions, IReadOnlyList`1 finallyConventions, IServiceProvider applicationServices)
+   at Microsoft.AspNetCore.Routing.RouteGroupBuilder.GroupEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.CreateEndpointsUnsynchronized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.EnsureEndpointsInitialized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.DataSourceDependentCache`1.Initialize()
+   at System.Threading.LazyInitializer.EnsureInitializedCore[T](T& target, Boolean& initialized, Object& syncLock, Func`1 valueFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher..ctor(EndpointDataSource dataSource, Lifetime lifetime, Func`1 matcherBuilderFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherFactory.CreateMatcher(EndpointDataSource dataSource)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.InitializeCoreAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatcher|10_0(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task`1 matcherTask)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-10-20 14:52:49.353 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/favicon.ico - 500 null text/plain; charset=utf-8 29.8331ms
+2025-10-20 14:54:59.747 +01:00 [INF] Application is shutting down...
+2025-10-20 15:00:09.887 +01:00 [INF] Now listening on: http://localhost:5001
+2025-10-20 15:00:09.928 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-20 15:00:09.930 +01:00 [INF] Hosting environment: Development
+2025-10-20 15:00:09.931 +01:00 [INF] Content root path: C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api
+2025-10-20 15:00:10.871 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/ - null null
+2025-10-20 15:00:10.958 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/ - 404 0 null 88.6153ms
+2025-10-20 15:00:10.976 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5001/, Response status code: 404
+2025-10-20 15:01:02.032 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger - null null
+2025-10-20 15:01:02.044 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger - 302 0 null 12.4618ms
+2025-10-20 15:01:02.061 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/index.html - null null
+2025-10-20 15:01:02.171 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/index.html - 200 null text/html; charset=utf-8 110.5211ms
+2025-10-20 15:01:02.417 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - null null
+2025-10-20 15:01:02.437 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-10-20 15:01:02.745 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - 200 null application/json; charset=utf-8 327.9413ms
+2025-10-20 15:01:09.095 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks - null null
+2025-10-20 15:01:09.111 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:01:09.215 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:01:09.218 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No service for type 'Microsoft.Extensions.Logging.ILogger' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at lambda_method2(Closure, Object, HttpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.DefaultFilesMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-10-20 15:01:09.234 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks - 500 null text/plain; charset=utf-8 138.1448ms
+2025-10-20 15:07:50.696 +01:00 [INF] Application is shutting down...
+2025-10-20 15:13:15.593 +01:00 [INF] Now listening on: http://localhost:5001
+2025-10-20 15:13:15.635 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-20 15:13:15.637 +01:00 [INF] Hosting environment: Development
+2025-10-20 15:13:15.638 +01:00 [INF] Content root path: C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api
+2025-10-20 15:13:16.506 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/ - null null
+2025-10-20 15:13:16.587 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/ - 404 0 null 81.7888ms
+2025-10-20 15:13:16.605 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5001/, Response status code: 404
+2025-10-20 15:13:20.015 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger - null null
+2025-10-20 15:13:20.025 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger - 302 0 null 10.6894ms
+2025-10-20 15:13:20.032 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/index.html - null null
+2025-10-20 15:13:20.128 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/index.html - 200 null text/html; charset=utf-8 96.404ms
+2025-10-20 15:13:20.334 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - null null
+2025-10-20 15:13:20.352 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-10-20 15:13:20.688 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - 200 null application/json; charset=utf-8 353.4675ms
+2025-10-20 15:13:26.999 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks - null null
+2025-10-20 15:13:27.012 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:13:27.219 +01:00 [INF] Requesting all tasks
+2025-10-20 15:13:27.743 +01:00 [WRN] No tasks were found
+2025-10-20 15:13:27.745 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:13:27.750 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks - 200 0 null 751.2457ms
+2025-10-20 15:16:42.995 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/tasks - application/json 62
+2025-10-20 15:16:43.000 +01:00 [INF] Executing endpoint 'HTTP: POST /tasks/'
+2025-10-20 15:16:43.016 +01:00 [INF] adding task
+2025-10-20 15:16:43.138 +01:00 [INF] Saved 1 entities to in-memory store.
+2025-10-20 15:16:43.144 +01:00 [INF] successfully added task
+2025-10-20 15:16:43.146 +01:00 [INF] Executed endpoint 'HTTP: POST /tasks/'
+2025-10-20 15:16:43.148 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/tasks - 200 0 null 152.5332ms
+2025-10-20 15:17:02.852 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks - null null
+2025-10-20 15:17:02.858 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:17:02.861 +01:00 [INF] Requesting all tasks
+2025-10-20 15:17:02.883 +01:00 [INF] Retrieved 1 tasks
+2025-10-20 15:17:02.886 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:17:02.887 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks - 200 0 null 34.6563ms
+2025-10-20 15:17:06.997 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks - null null
+2025-10-20 15:17:07.004 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:17:07.005 +01:00 [INF] Requesting all tasks
+2025-10-20 15:17:07.007 +01:00 [INF] Retrieved 1 tasks
+2025-10-20 15:17:07.010 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:17:07.013 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks - 200 0 null 16.495ms
+2025-10-20 15:17:07.469 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks - null null
+2025-10-20 15:17:07.472 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:17:07.473 +01:00 [INF] Requesting all tasks
+2025-10-20 15:17:07.475 +01:00 [INF] Retrieved 1 tasks
+2025-10-20 15:17:07.477 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:17:07.478 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks - 200 0 null 9.5133ms
+2025-10-20 15:17:07.875 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks - null null
+2025-10-20 15:17:07.880 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:17:07.882 +01:00 [INF] Requesting all tasks
+2025-10-20 15:17:07.885 +01:00 [INF] Retrieved 1 tasks
+2025-10-20 15:17:07.886 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:17:07.888 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks - 200 0 null 12.7268ms
+2025-10-20 15:17:08.209 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks - null null
+2025-10-20 15:17:08.214 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:17:08.216 +01:00 [INF] Requesting all tasks
+2025-10-20 15:17:08.217 +01:00 [INF] Retrieved 1 tasks
+2025-10-20 15:17:08.219 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:17:08.221 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks - 200 0 null 11.7204ms
+2025-10-20 15:17:56.824 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks/1 - null null
+2025-10-20 15:17:56.837 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/{id}'
+2025-10-20 15:17:56.845 +01:00 [INF] Requesting task with id 1
+2025-10-20 15:17:56.914 +01:00 [INF] Retrieved task with id 1
+2025-10-20 15:17:56.916 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/{id}'
+2025-10-20 15:17:56.919 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks/1 - 200 0 null 94.3425ms
+2025-10-20 15:18:12.068 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks/2 - null null
+2025-10-20 15:18:12.079 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/{id}'
+2025-10-20 15:18:12.083 +01:00 [INF] Requesting task with id 2
+2025-10-20 15:18:12.089 +01:00 [WRN] Could not find task with id 2
+2025-10-20 15:18:12.093 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/{id}'
+2025-10-20 15:18:12.097 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks/2 - 200 0 null 28.7512ms
+2025-10-20 15:18:21.423 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks/84 - null null
+2025-10-20 15:18:21.433 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/{id}'
+2025-10-20 15:18:21.437 +01:00 [INF] Requesting task with id 84
+2025-10-20 15:18:21.439 +01:00 [WRN] Could not find task with id 84
+2025-10-20 15:18:21.441 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/{id}'
+2025-10-20 15:18:21.444 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks/84 - 200 0 null 20.4452ms
+2025-10-20 15:20:06.066 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks/complete - null null
+2025-10-20 15:20:06.075 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/complete'
+2025-10-20 15:20:06.080 +01:00 [INF] Requesting all complete tasks
+2025-10-20 15:20:06.088 +01:00 [INF] Could not find any complete tasks
+2025-10-20 15:20:06.089 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/complete'
+2025-10-20 15:20:06.092 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks/complete - 200 0 null 26.3698ms
+2025-10-20 15:22:17.343 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/index.html - null null
+2025-10-20 15:22:17.349 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/index.html - 200 null text/html; charset=utf-8 6.8266ms
+2025-10-20 15:22:17.496 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - null null
+2025-10-20 15:22:17.500 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/favicon-32x32.png - null null
+2025-10-20 15:22:17.505 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - 200 null application/json; charset=utf-8 8.9058ms
+2025-10-20 15:22:17.522 +01:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-10-20 15:22:17.525 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/favicon-32x32.png - 200 628 image/png 25.6568ms
+2025-10-20 15:22:22.718 +01:00 [INF] Application is shutting down...
+2025-10-20 15:32:44.133 +01:00 [INF] Now listening on: http://localhost:5001
+2025-10-20 15:32:44.176 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-20 15:32:44.181 +01:00 [INF] Hosting environment: Development
+2025-10-20 15:32:44.185 +01:00 [INF] Content root path: C:\Users\Laurie.bassett-jones\Projects\TaskBoard\Api
+2025-10-20 15:32:45.020 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/ - null null
+2025-10-20 15:32:45.106 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/ - 404 0 null 87.7958ms
+2025-10-20 15:32:45.124 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5001/, Response status code: 404
+2025-10-20 15:32:49.904 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger - null null
+2025-10-20 15:32:49.915 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger - 302 0 null 11.449ms
+2025-10-20 15:32:49.923 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/index.html - null null
+2025-10-20 15:32:50.024 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/index.html - 200 null text/html; charset=utf-8 100.6866ms
+2025-10-20 15:32:50.217 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - null null
+2025-10-20 15:32:50.236 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-10-20 15:32:50.548 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/TaskBoardAPI/swagger.json - 200 null application/json; charset=utf-8 331.0253ms
+2025-10-20 15:33:03.493 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks - null null
+2025-10-20 15:33:03.510 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:33:03.639 +01:00 [INF] Requesting all tasks
+2025-10-20 15:33:04.062 +01:00 [WRN] No tasks were found
+2025-10-20 15:33:04.066 +01:00 [INF] Setting HTTP status code 400.
+2025-10-20 15:33:04.068 +01:00 [INF] Writing value of type 'String' as Json.
+2025-10-20 15:33:04.073 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:33:04.080 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks - 400 null application/json; charset=utf-8 586.9372ms
+2025-10-20 15:34:11.844 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/tasks - application/json 62
+2025-10-20 15:34:11.854 +01:00 [INF] Executing endpoint 'HTTP: POST /tasks/'
+2025-10-20 15:34:11.869 +01:00 [INF] adding task
+2025-10-20 15:34:11.990 +01:00 [INF] Saved 1 entities to in-memory store.
+2025-10-20 15:34:11.997 +01:00 [INF] successfully added task
+2025-10-20 15:34:11.999 +01:00 [INF] Setting HTTP status code 201.
+2025-10-20 15:34:12.001 +01:00 [INF] Writing value of type 'TaskItem' as Json.
+2025-10-20 15:34:12.006 +01:00 [INF] Executed endpoint 'HTTP: POST /tasks/'
+2025-10-20 15:34:12.009 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/tasks - 201 null application/json; charset=utf-8 164.1968ms
+2025-10-20 15:34:29.005 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks - null null
+2025-10-20 15:34:29.018 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:34:29.023 +01:00 [INF] Requesting all tasks
+2025-10-20 15:34:29.051 +01:00 [INF] Retrieved 1 tasks
+2025-10-20 15:34:29.053 +01:00 [INF] Setting HTTP status code 200.
+2025-10-20 15:34:29.060 +01:00 [INF] Writing value of type 'List`1' as Json.
+2025-10-20 15:34:29.062 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:34:29.064 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks - 200 null application/json; charset=utf-8 58.9836ms
+2025-10-20 15:34:43.595 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks/1 - null null
+2025-10-20 15:34:43.609 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/{id}'
+2025-10-20 15:34:43.615 +01:00 [INF] Requesting task with id 1
+2025-10-20 15:34:43.681 +01:00 [INF] Retrieved task with id 1
+2025-10-20 15:34:43.683 +01:00 [INF] Setting HTTP status code 200.
+2025-10-20 15:34:43.686 +01:00 [INF] Writing value of type 'TaskItem' as Json.
+2025-10-20 15:34:43.688 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/{id}'
+2025-10-20 15:34:43.691 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks/1 - 200 null application/json; charset=utf-8 96.2457ms
+2025-10-20 15:34:55.712 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks/2 - null null
+2025-10-20 15:34:55.723 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/{id}'
+2025-10-20 15:34:55.727 +01:00 [INF] Requesting task with id 2
+2025-10-20 15:34:55.733 +01:00 [WRN] Could not find task with id 2
+2025-10-20 15:34:55.736 +01:00 [INF] Setting HTTP status code 400.
+2025-10-20 15:34:55.739 +01:00 [INF] Writing value of type 'String' as Json.
+2025-10-20 15:34:55.742 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/{id}'
+2025-10-20 15:34:55.745 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks/2 - 400 null application/json; charset=utf-8 32.7909ms
+2025-10-20 15:35:11.404 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks/complete - null null
+2025-10-20 15:35:11.418 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/complete'
+2025-10-20 15:35:11.424 +01:00 [INF] Requesting all complete tasks
+2025-10-20 15:35:11.436 +01:00 [INF] Could not find any complete tasks
+2025-10-20 15:35:11.440 +01:00 [INF] Setting HTTP status code 400.
+2025-10-20 15:35:11.443 +01:00 [INF] Writing value of type 'String' as Json.
+2025-10-20 15:35:11.446 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/complete'
+2025-10-20 15:35:11.449 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks/complete - 400 null application/json; charset=utf-8 45.0451ms
+2025-10-20 15:35:45.661 +01:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5001/tasks/1 - application/json 61
+2025-10-20 15:35:45.675 +01:00 [INF] Executing endpoint 'HTTP: PUT /tasks/{id}'
+2025-10-20 15:35:45.683 +01:00 [INF] updating task 1
+2025-10-20 15:35:45.694 +01:00 [INF] Saved 1 entities to in-memory store.
+2025-10-20 15:35:45.697 +01:00 [INF] successfully updated task 1
+2025-10-20 15:35:45.700 +01:00 [INF] Setting HTTP status code 204.
+2025-10-20 15:35:45.702 +01:00 [INF] Executed endpoint 'HTTP: PUT /tasks/{id}'
+2025-10-20 15:35:45.705 +01:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5001/tasks/1 - 204 null null 44.2522ms
+2025-10-20 15:36:00.803 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks/complete - null null
+2025-10-20 15:36:00.813 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/complete'
+2025-10-20 15:36:00.816 +01:00 [INF] Requesting all complete tasks
+2025-10-20 15:36:00.820 +01:00 [INF] Retrieved 1 complete tasks
+2025-10-20 15:36:00.822 +01:00 [INF] Setting HTTP status code 200.
+2025-10-20 15:36:00.825 +01:00 [INF] Writing value of type 'List`1' as Json.
+2025-10-20 15:36:00.828 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/complete'
+2025-10-20 15:36:00.831 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks/complete - 200 null application/json; charset=utf-8 28.5015ms
+2025-10-20 15:36:06.412 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks - null null
+2025-10-20 15:36:06.421 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:36:06.425 +01:00 [INF] Requesting all tasks
+2025-10-20 15:36:06.429 +01:00 [INF] Retrieved 1 tasks
+2025-10-20 15:36:06.431 +01:00 [INF] Setting HTTP status code 200.
+2025-10-20 15:36:06.434 +01:00 [INF] Writing value of type 'List`1' as Json.
+2025-10-20 15:36:06.438 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:36:06.441 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks - 200 null application/json; charset=utf-8 28.6456ms
+2025-10-20 15:36:20.655 +01:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5001/tasks/1 - null null
+2025-10-20 15:36:20.665 +01:00 [INF] Executing endpoint 'HTTP: DELETE /tasks/{id}'
+2025-10-20 15:36:20.671 +01:00 [INF] attempting to delete task 1
+2025-10-20 15:36:20.679 +01:00 [INF] Saved 1 entities to in-memory store.
+2025-10-20 15:36:20.684 +01:00 [INF] successfully deleted task 1
+2025-10-20 15:36:20.686 +01:00 [INF] Setting HTTP status code 204.
+2025-10-20 15:36:20.688 +01:00 [INF] Executed endpoint 'HTTP: DELETE /tasks/{id}'
+2025-10-20 15:36:20.691 +01:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5001/tasks/1 - 204 null null 35.6189ms
+2025-10-20 15:36:32.280 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/tasks - null null
+2025-10-20 15:36:32.298 +01:00 [INF] Executing endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:36:32.300 +01:00 [INF] Requesting all tasks
+2025-10-20 15:36:32.304 +01:00 [WRN] No tasks were found
+2025-10-20 15:36:32.306 +01:00 [INF] Setting HTTP status code 400.
+2025-10-20 15:36:32.308 +01:00 [INF] Writing value of type 'String' as Json.
+2025-10-20 15:36:32.311 +01:00 [INF] Executed endpoint 'HTTP: GET /tasks/'
+2025-10-20 15:36:32.314 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/tasks - 400 null application/json; charset=utf-8 34.0197ms
+2025-10-20 15:37:55.574 +01:00 [INF] Application is shutting down...
