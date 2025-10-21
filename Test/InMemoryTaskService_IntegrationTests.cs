@@ -35,8 +35,33 @@ public class InMemoryTaskServiceIntegrationTests
         var result = await _service.AddTask(task);
 
         // assert
-        result.Should().BeOfType<Created>();
+        result.Should().BeOfType<Created<TaskItem>>();
     }
+
+    [Test]
+    public async Task GetAllTasks_ShouldReturnBadRequestWhenNoTasks()
+    {
+        // arrange
+        var result = await _service.GetAllTasks();
+
+        // assert
+        result.Should().BeOfType<BadRequest<string>>();
+    }
+
+    [Test]
+    public async Task GetAllTasks_ShouldReturnOkWhenAtLeastOneTask()
+    {
+        // arrange
+        var task = new TaskItem {  Name = "task", IsComplete = false, Priority = 1 };
+        var addTask = await _service.AddTask(task);
+        var result = await _service.GetAllTasks();
+
+        // assert
+        result.Should().BeOfType<Ok<List<TaskItem>>>();
+    }
+    
+    [Test]
+    
     
     [TearDown]
     public void TearDown()
