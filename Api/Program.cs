@@ -48,37 +48,32 @@ if (app.Environment.IsDevelopment())
 // implementing MapGroup for simplification:
 var tasks = app.MapGroup("/tasks");
 
-tasks.MapGet("/", async (ITaskService service, TaskDb db, [FromServices] ILogger<InMemoryTaskService> logger) =>
+tasks.MapGet("/", async (ITaskService service) =>
 {
     var result = await service.GetAllTasks();
     return result;
 });         
-tasks.MapGet("/{id}", async (int id, ITaskService service, TaskDb db, [FromServices] ILogger<InMemoryTaskService> logger) =>
+tasks.MapGet("/{id}", async (int id, ITaskService service) =>
 {
-    // I am passing a TaskDb db here. When I do this across all the MapGet methods 
-    // does the program know to work with the same in-memory database because I
-    // have given the db the name of "Tasks" at the top? 
-    // If so, if I were to create another database also of type TaskDb, how would it 
-    // know which TaskDb I am referring to?
     var result = await service.GetTask(id);
     return result;
 }); 
-tasks.MapGet("/complete", async (ITaskService service, TaskDb db, [FromServices] ILogger<InMemoryTaskService> logger) =>
+tasks.MapGet("/complete", async (ITaskService service) =>
 {
     var result = await service.GetCompleteTasks();
     return result;
 });  
-tasks.MapPost("/", async (TaskItem task, ITaskService service, TaskDb db, [FromServices] ILogger<InMemoryTaskService> logger) =>
+tasks.MapPost("/", async (TaskItem task, ITaskService service) =>
 {
     var result = await service.AddTask(task);
     return result;
 });   
-tasks.MapPut("/{id}", async (int id, TaskItem inputTask, ITaskService service, TaskDb db, [FromServices] ILogger<InMemoryTaskService> logger) =>
+tasks.MapPut("/{id}", async (int id, TaskItem inputTask, ITaskService service) =>
 {
     var result = await service.UpdateTask(id, inputTask);
     return result;
 });    
-tasks.MapDelete("/{id}", async (int id, ITaskService service, TaskDb db, [FromServices] ILogger<InMemoryTaskService> logger) =>
+tasks.MapDelete("/{id}", async (int id, ITaskService service) =>
 {
     var result = await service.DeleteTask(id);
     return result;
