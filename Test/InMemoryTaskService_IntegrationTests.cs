@@ -199,6 +199,79 @@ public class InMemoryTaskServiceIntegrationTests
         // assert
         okResult!.Value.Should().BeEquivalentTo(task);
     }
+
+    [Test]
+    public async Task GetCompleteTasks_ShouldReturnCorrectTasksAndLength()
+    {
+        // arrange
+        var numTasksToAdd = 10;
+        var numCompletedTasks = 5;
+        for (int taskNum = 0; taskNum < numTasksToAdd; taskNum++)
+        {
+            if (taskNum < numCompletedTasks)
+            {
+                var task = new TaskItem { Name = $"Task {taskNum}", IsComplete = true, Priority = 1 };
+                var addTask = await _service.AddTask(task);
+            }
+            else
+            {
+                var task = new TaskItem { Name = $"Task {taskNum}", IsComplete = false, Priority = 1 };
+                var addTask = await _service.AddTask(task);
+            }
+        }
+
+        var result = await _service.GetCompleteTasks();
+        var okResult = result as Ok<List<TaskItem>>;
+
+        // assert
+        okResult!.Value.Should().HaveCount(numCompletedTasks).And.AllSatisfy(x => x.IsComplete.Should().Be(true));
+    }
+
+    [Test]
+    public async Task GetTask_ShouldReturnUpdatedTask_WhenTaskUpdated()
+    {
+        // arrange
+        var numTasks = 3;
+        for (int i = 0; i < numTasks; i++)
+        {
+            var task = new TaskItem { Name = $"task {i}", IsComplete = false, Priority = 1 };
+            var addTask = await _service.AddTask(task);
+        }
+
+        var updatedTaskId = 2;
+        TaskItem updatedTask = new TaskItem { Id = updatedTaskId, Name = $"task {updatedTaskId}", IsComplete = true, Priority = 1 };
+        var updateTask = await _service.UpdateTask(updatedTaskId, updatedTask);
+
+        var result = await _service.GetTask(updatedTaskId);
+        var okResult = result as Ok<TaskItem>;
+
+        // assert
+        okResult!.Value.Should().BeEquivalentTo(updatedTask);
+    }
+
+    [Test]
+    public async Task GetAllTasks_ShouldReturnCorrectLength_WhenTaskIsDeleted()
+    {
+        // arrange
+        var numTasks = 4;
+        for (int i = 0; i < numTasks; i++)
+        {
+            var task = new TaskItem { Name = $"task {i}", IsComplete = false, Priority = 1 };
+            var addTask = await _service.AddTask(task);
+        }
+
+        var resultBeforeDeleting = await _service.GetAllTasks();
+        var okResultBeforeDeleting = resultBeforeDeleting as Ok<List<TaskItem>>;
+        
+        var deletedTaskId = 2;
+        var deleteTask = await _service.DeleteTask(deletedTaskId);
+        var resultAfterDeleting = await _service.GetAllTasks();
+        var okResultAfterDeleting = resultAfterDeleting as Ok<List<TaskItem>>;
+        
+        // assert
+        okResultBeforeDeleting!.Value.Should().HaveCount(numTasks);
+        okResultAfterDeleting!.Value.Should().HaveCount(numTasks-1).And.NotContain(task => task.Id == deletedTaskId);
+    }
     
     
     [TearDown]
