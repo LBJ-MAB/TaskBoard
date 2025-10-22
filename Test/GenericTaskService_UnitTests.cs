@@ -58,4 +58,74 @@ public class GenericTaskService_UnitTests
         // assert
         okResult!.Value.Should().HaveCount(numTasks);
     }
+
+    [Test]
+    public async Task GetAllTasks_ShouldReturnCorrectTasksList()
+    {
+        // arrange
+        List<TaskItem> tasksList = new List<TaskItem>();
+        int numTasks = 5;
+        for (int i = 1; i <= numTasks; i++)
+        {
+            tasksList.Add(new TaskItem { Id = i, Name = $"task {i}", IsComplete = false, Priority = 1 });
+        }
+        _mockRepo.Setup(r => r.GetAllAsync()).Returns(Task.FromResult(tasksList));
+
+        // act
+        var result = await _service.GetAllTasks();
+        var okResult = result as Ok<List<TaskItem>>;
+
+        // assert
+        okResult!.Value.Should().BeEquivalentTo(tasksList);
+    }
+    
+    // test the order of the tasks based on complete status and priority
+    // order by priority
+    [Test]
+    public async Task GetAllTasks_ShouldReturnListOrderedByPriority()
+    {
+        // arrange
+        List<TaskItem> tasksList = new List<TaskItem>();
+        int numTasks = 5;
+        for (int i = 1; i <= numTasks; i++)
+        {
+            tasksList.Add(new TaskItem { Id = i, Name = $"task {i}", IsComplete = false, Priority = numTasks+1-i });
+        }
+        _mockRepo.Setup(r => r.GetAllAsync()).Returns(Task.FromResult(tasksList));
+
+        // act
+        var result = await _service.GetAllTasks();
+        var okResult = result as Ok<List<TaskItem>>;
+
+        // assert
+        okResult!.Value.Should().BeInDescendingOrder(t => t.Priority);
+    }
+    
+    [Test]
+    public async Task GetAllTasks_ShouldStartWithTaskWithPriorityOf1()
+    {
+        // arrange
+        List<TaskItem> tasksList = new List<TaskItem>();
+        int numTasks = 5;
+        for (int i = 1; i <= numTasks; i++)
+        {
+            tasksList.Add(new TaskItem { Id = i, Name = $"task {i}", IsComplete = false, Priority = numTasks+1-i });
+        }
+        _mockRepo.Setup(r => r.GetAllAsync()).Returns(Task.FromResult(tasksList));
+
+        // act
+        var result = await _service.GetAllTasks();
+        var okResult = result as Ok<List<TaskItem>>;
+
+        // assert
+        okResult!.Value.Should().StartWith(new TaskItem { Id = 5, Name = $"task 5", IsComplete = false, Priority = 1 });
+    }
+    
+    // order by is complete status
+    
+    // order by complete status and then priority
+    
+    // preceeding
+    // starts with
+    // ends with
 }
