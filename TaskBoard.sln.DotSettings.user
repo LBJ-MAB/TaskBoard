@@ -7,5 +7,16 @@
     &lt;TestId&gt;NUnit3x::5DFDB069-2C1F-40C0-AB6D-E0194CA8F7A5::net9.0::Test.GenericTaskService_UnitTests.GetAllTasks_ShouldReturnCorrectTasksList&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::5DFDB069-2C1F-40C0-AB6D-E0194CA8F7A5::net9.0::Test.GenericTaskService_UnitTests.GetAllTasks_ShouldReturnListOrderedByPriority&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::5DFDB069-2C1F-40C0-AB6D-E0194CA8F7A5::net9.0::Test.GenericTaskService_UnitTests.GetAllTasks_ShouldStartWithTaskWithPriorityOf1&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::5DFDB069-2C1F-40C0-AB6D-E0194CA8F7A5::net9.0::Test.GenericTaskService_UnitTests.GetAllTasks_ShouldStartWithTaskWithIsCompleteFalse&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::5DFDB069-2C1F-40C0-AB6D-E0194CA8F7A5::net9.0::Test.GenericTaskService_UnitTests.GetAllTasks_ShouldBeOrderedByIsCompleteThenPriority&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::5DFDB069-2C1F-40C0-AB6D-E0194CA8F7A5::net9.0::Test.GenericTaskService_UnitTests.GetCompleteTasks_ShouldReturnOnlyCompleteTasks&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::5DFDB069-2C1F-40C0-AB6D-E0194CA8F7A5::net9.0::Test.GenericTaskService_UnitTests.GetAllTasks_ShouldReturnOk&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::5DFDB069-2C1F-40C0-AB6D-E0194CA8F7A5::net9.0::Test.GenericTaskService_UnitTests.GetAllTasks_ShouldReturnBadRequest_WhenDbReturnsNull&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::5DFDB069-2C1F-40C0-AB6D-E0194CA8F7A5::net9.0::Test.GenericTaskService_UnitTests.GetAllTasks_ShouldReturnBadRequest_WhenDbReturnsEmptyList&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::5DFDB069-2C1F-40C0-AB6D-E0194CA8F7A5::net9.0::Test.GenericTaskService_UnitTests.GetTasks_ShouldReturnOk_WhenDbReturnsTaskItem&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::5DFDB069-2C1F-40C0-AB6D-E0194CA8F7A5::net9.0::Test.GenericTaskService_UnitTests.GetTasks_ShouldReturnBadRequest_WhenDbReturnsNull&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::5DFDB069-2C1F-40C0-AB6D-E0194CA8F7A5::net9.0::Test.GenericTaskService_UnitTests.GetCompleteTasks_ShouldReturnOk_WhenDbReturnsCompletedList&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::5DFDB069-2C1F-40C0-AB6D-E0194CA8F7A5::net9.0::Test.GenericTaskService_UnitTests.GetCompleteTasks_ShouldReturnBadRequest_WhenDbReturnsEmptyList&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::5DFDB069-2C1F-40C0-AB6D-E0194CA8F7A5::net9.0::Test.GenericTaskService_UnitTests.GetCompleteTasks_ShouldReturnBadRequest_WhenDbReturnsNull&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
