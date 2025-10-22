@@ -125,3 +125,6 @@ public class InMemoryTaskService : ITaskService
         return TypedResults.NoContent();
     }
 }
+
+// make generic implementation making use of repository
+
