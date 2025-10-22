@@ -23,8 +23,10 @@ var serilogLogger = new LoggerConfiguration()
 Log.Logger = serilogLogger;
 builder.Host.UseSerilog();
 
-// adding tasks service
-builder.Services.AddScoped<ITaskService, InMemoryTaskService>();
+// adding in memory task repo
+builder.Services.AddScoped<ITaskRepository, InMemoryTaskRepository>();
+// adding generic tasks service using repo
+builder.Services.AddScoped<ITaskService, GenericTaskService>();
 
 // build the web application
 var app = builder.Build();

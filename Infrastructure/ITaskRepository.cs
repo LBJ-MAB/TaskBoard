@@ -6,9 +6,11 @@ namespace Infrastructure;
 public interface ITaskRepository
 {
     // get all async
-    Task<IEnumerable<TaskItem>> GetAllAsync();
+    Task<List<TaskItem>> GetAllAsync();
     // get by id
     Task<TaskItem> GetByIdAsync(int id);
+    // get complete
+    Task<List<TaskItem>> GetCompleteAsync();
     // add
     Task AddAsync(TaskItem task);
     // delete
@@ -26,7 +28,7 @@ public class InMemoryTaskRepository : ITaskRepository
         _context = context;
     }
     
-    public async Task<IEnumerable<TaskItem>> GetAllAsync()
+    public async Task<List<TaskItem>> GetAllAsync()
     {
         return await _context.Tasks.OrderBy(t => t.IsComplete).ThenBy(t => t.Priority).ToListAsync();
     }
@@ -34,6 +36,11 @@ public class InMemoryTaskRepository : ITaskRepository
     public async Task<TaskItem> GetByIdAsync(int id)
     {
         return await _context.Tasks.FindAsync(id);
+    }
+
+    public async Task<List<TaskItem>> GetCompleteAsync()
+    {
+        return await _context.Tasks.Where(t => t.IsComplete).ToListAsync();
     }
 
     public async Task AddAsync(TaskItem task)
