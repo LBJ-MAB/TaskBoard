@@ -47,7 +47,7 @@ public class InMemoryTaskService : ITaskService
     {
         // log the beginning of the request
         _logger.LogInformation("Requesting all tasks");
-        // get all tasks
+        // get all tasks - only this line to be replaced with repo stuff - data access
         var tasks = await _db.Tasks.OrderBy(t => t.IsComplete).ThenBy(t => t.Priority).ToListAsync();
         if (tasks == null || !tasks.Any())
         {
