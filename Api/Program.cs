@@ -24,7 +24,7 @@ Log.Logger = serilogLogger;
 builder.Host.UseSerilog();
 
 // adding in memory task repo
-builder.Services.AddScoped<ITaskRepository, InMemoryTaskRepository>();
+builder.Services.AddScoped<ITaskRepository, DbTaskRepository>();
 // adding generic tasks service using repo
 builder.Services.AddScoped<ITaskService, GenericTaskService>();
 

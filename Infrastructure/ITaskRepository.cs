@@ -19,11 +19,11 @@ public interface ITaskRepository
     Task SaveChangesAsync();
 }
 
-// make concrete implementation for an in memory database
-public class InMemoryTaskRepository : ITaskRepository
+// make concrete implementation for database
+public class DbTaskRepository : ITaskRepository
 {
     private TaskDb _context;
-    public InMemoryTaskRepository(TaskDb context)
+    public DbTaskRepository(TaskDb context)
     {
         _context = context;
     }
