@@ -795,7 +795,8 @@
           "Domain": "1.0.0",
           "Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "9.0.10",
-          "Microsoft.EntityFrameworkCore.InMemory": "9.0.10"
+          "Microsoft.EntityFrameworkCore.InMemory": "9.0.10",
+          "Serilog": "4.3.0"
         },
         "compile": {
           "bin/placeholder/Application.dll": {}

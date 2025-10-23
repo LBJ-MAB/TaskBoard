@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6Adz2WF+Z6M=",
+  "dgSpecHash": "W2Dhd0yXT9Y=",
   "success": true,
   "projectFilePath": "C:\\Users\\Laurie.bassett-jones\\Projects\\TaskBoard\\Test\\Test.csproj",
   "expectedPackageFiles": [
@@ -33,6 +33,7 @@
     "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\nunit\\4.2.2\\nunit.4.2.2.nupkg.sha512",
     "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\nunit.analyzers\\4.4.0\\nunit.analyzers.4.4.0.nupkg.sha512",
     "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\nunit3testadapter\\4.6.0\\nunit3testadapter.4.6.0.nupkg.sha512",
+    "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\serilog\\4.3.0\\serilog.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512",
     "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512",
     "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512"
