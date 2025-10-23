@@ -19,6 +19,8 @@ builder.Services.AddOpenApiDocument(config =>
 // configure serilog
 var serilogLogger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
+    .Enrich.FromLogContext()
+    .WriteTo.Console(outputTemplate : "[{Timestamp:HH:mm:ss}] {Level:u3} {CorrelationId} {Message:lj}{NewLine}{Exception}")
     .CreateLogger();
 Log.Logger = serilogLogger;
 builder.Host.UseSerilog();
@@ -46,6 +48,8 @@ if (app.Environment.IsDevelopment())
 
 // middleware for logging to console - view in Run window in Rider
 // app.UseMiddleware<RequestLoggingMiddleware>();
+// middleware for logging correlation ID
+app.UseMiddleware<LoggingCorrelationIdMiddleware>();
 
 // implementing MapGroup for simplification:
 var tasks = app.MapGroup("/tasks");

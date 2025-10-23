@@ -57,6 +57,6 @@ public class DbTaskRepository : ITaskRepository
 
     public async Task SaveChangesAsync()
     {
-        _context.SaveChangesAsync();
+        await _context.SaveChangesAsync();
     }
 }
